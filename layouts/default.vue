@@ -7,6 +7,7 @@ const items = computed<NavigationMenuItem[]>(() => [
   { label: 'Cyber', to: '/cyber', icon: 'i-lucide-shield-check' },
   { label: 'Data-platform', to: '/data', icon: 'i-lucide-database' },
   { label: 'Sites vitrine', to: '/sites', icon: 'i-lucide-layout-template' },
+  { label: 'À propos', to: '/a-propos', icon: 'i-lucide-info' },
 ])
 
 const legalItems = computed<NavigationMenuItem[]>(() => [

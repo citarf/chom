@@ -58,9 +58,9 @@ const services = [
 
     <UPageSection
       id="services"
-      headline="Nos métiers"
-      title="Trois lignes de service, un seul interlocuteur"
-      description="Chaque métier répond à un besoin concret. On les combine quand c'est pertinent — par exemple sécuriser une plateforme de données ou outiller un site de collecte de leads."
+      headline="Protéger · fiabiliser · exposer"
+      title="Trois métiers, un seul numérique maîtrisé"
+      description="Protéger votre cyber, fiabiliser vos données, exposer votre activité en ligne : trois faces d'un même fil rouge. Un seul interlocuteur, et la cohérence quand vos besoins se recoupent."
     >
       <UPageGrid>
         <ServiceCard
