@@ -75,7 +75,10 @@ const valorisation = [
       headline="Data-platform"
       title="Vos données, fiables, gouvernées et utiles"
       description="Beaucoup d'organisations accumulent des données sans pouvoir y faire confiance ni les exploiter. CHOM construit le socle qui manque : des pipelines fiables, une gouvernance qui rend la donnée traçable, et une restitution qui éclaire les décisions."
-      :links="[{ label: 'Demander un devis', to: '/devis', icon: 'i-lucide-file-text' }]"
+      :links="[
+        { label: 'Demander un devis', to: '/devis?ligne=data', icon: 'i-lucide-file-text' },
+        { label: 'Première rencontre', to: '/devis?ligne=data&objet=rencontre', color: 'neutral', variant: 'subtle', icon: 'i-lucide-calendar' },
+      ]"
     />
 
     <UPageSection
@@ -102,16 +105,19 @@ const valorisation = [
     <UPageSection orientation="horizontal" :ui="{ container: 'py-8 sm:py-12' }">
       <UPageCard
         variant="subtle"
-        icon="i-lucide-info"
-        title="Une expérience à l'échelle"
-        description="Notre approche s'appuie sur des chantiers réels de gouvernance et de valorisation de données météorologiques — patrimoine de l'ordre du téraoctet, des milliers de tables, des centaines de pipelines — et sur des projets data d'intérêt général (Data For Good)."
+        icon="i-lucide-compass"
+        title="Une méthode, pas des promesses"
+        description="Notre approche vient de chantiers réels : remettre d'aplomb des systèmes de données hétérogènes et volumineux, y instaurer de la traçabilité, et faire parler la donnée — y compris sur des projets d'intérêt général. On applique cette rigueur à votre échelle, sans jargon ni sur-ingénierie."
       />
     </UPageSection>
 
     <UPageCTA
       title="Un patrimoine de données à fiabiliser ou à valoriser ?"
-      description="Parlons-en : on cadre le besoin et on propose un devis adapté à votre maturité."
-      :links="[{ label: 'Demander un devis', to: '/devis', icon: 'i-lucide-file-text' }]"
+      description="On cadre le besoin avec vous. Demandez un devis, ou commençons par une première rencontre — sans engagement."
+      :links="[
+        { label: 'Demander un devis', to: '/devis?ligne=data', icon: 'i-lucide-file-text' },
+        { label: 'Première rencontre', to: '/devis?ligne=data&objet=rencontre', color: 'neutral', variant: 'subtle', icon: 'i-lucide-calendar' },
+      ]"
     />
   </div>
 </template>
