@@ -1,7 +1,7 @@
 import { DevisValidationError, type DevisInput } from '../devis/domain/devis'
 import { submitDevis } from '../devis/application/submit-devis'
 import { InMemoryDevisRepository } from '../devis/infrastructure/in-memory-repo'
-import { LogNotifier } from '../devis/infrastructure/log-notifier'
+import { createNotifier } from '../devis/infrastructure/notifier-factory'
 
 // Adapter de persistance partagé entre requêtes (références incrémentales).
 const repo = new InMemoryDevisRepository()
@@ -12,7 +12,10 @@ const repo = new InMemoryDevisRepository()
  */
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig()
-  const notifier = new LogNotifier(config.devisRecipient)
+  const notifier = createNotifier({
+    webhookUrl: config.devisWebhookUrl,
+    recipient: config.devisRecipient,
+  })
 
   const body = await readBody<Partial<DevisInput>>(event)
 

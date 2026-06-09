@@ -5,8 +5,10 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
 
   runtimeConfig: {
-    // Destinataire des demandes de devis (adapter d'envoi). Stub pour l'instant.
+    // Destinataire des demandes (journalisé si aucun webhook n'est configuré).
     devisRecipient: process.env.DEVIS_RECIPIENT ?? 'contact@chom.re',
+    // URL de webhook où acheminer les leads (Slack, Make/n8n, transfert email…).
+    devisWebhookUrl: process.env.DEVIS_WEBHOOK_URL ?? '',
     public: {
       contactEmail: process.env.CONTACT_EMAIL ?? 'contact@chom.re',
     },
