@@ -10,7 +10,7 @@ const services = [
     icon: 'i-lucide-shield-check',
     title: 'Cybersécurité',
     description:
-      'Pilotage du risque cyber et protection des PME — de la sensibilisation managée à la conformité NIS2 / DORA.',
+      'Mesurer votre risque, le réduire, le prouver. De la sensibilisation des équipes à la conformité NIS2 ou DORA.',
     to: '/cyber',
     points: [
       'Vue unifiée et score de risque explicable',
@@ -22,7 +22,7 @@ const services = [
     icon: 'i-lucide-database',
     title: 'Data-platform',
     description:
-      'Ingénierie, gouvernance et valorisation de vos données — pipelines fiables, traçabilité, restitution.',
+      'Des données sur lesquelles on peut enfin compter : des flux qui tiennent, traçables, et qui parlent à ceux qui décident.',
     to: '/data',
     points: [
       'Pipelines, intégration, qualité',
@@ -34,7 +34,7 @@ const services = [
     icon: 'i-lucide-layout-template',
     title: 'Sites vitrine',
     description:
-      'Sites web rapides, accessibles et bien référencés — comme celui que vous parcourez.',
+      'Des sites rapides, accessibles et bien référencés. Celui que vous parcourez en est un.',
     to: '/sites',
     points: [
       'Performances et SEO soignés',
@@ -55,9 +55,9 @@ const services = [
       ]"
     >
       <template #description>
-        CHOM est une société française qui aide les organisations — à La Réunion comme en
-        métropole — à maîtriser leur risque cyber, à tirer de la valeur de leurs données et à
-        exister en ligne. Sur votre existant, en hébergement souverain.
+        Société française, à La Réunion comme en métropole. On sécurise votre informatique,
+        on fiabilise vos données et on soigne votre présence en ligne. À partir de vos outils
+        actuels, hébergé en Europe.
         <span class="block mt-3 text-sm text-muted">
           Réponse sous 48 h ouvrées · échange sans engagement · interlocuteur unique.
         </span>
@@ -67,8 +67,8 @@ const services = [
     <UPageSection
       id="services"
       headline="Protéger · fiabiliser · exposer"
-      title="Trois métiers, un seul numérique maîtrisé"
-      description="Protéger votre cyber, fiabiliser vos données, exposer votre activité en ligne : trois faces d'un même fil rouge. Un seul interlocuteur, et la cohérence quand vos besoins se recoupent."
+      title="Trois métiers, un seul interlocuteur"
+      description="Protéger, fiabiliser, exposer : trois facettes du même numérique. L'avantage d'avoir le même monde au bout du fil quand vos sujets se recoupent."
     >
       <UPageGrid>
         <ServiceCard
@@ -82,8 +82,8 @@ const services = [
     <TrustBand />
 
     <UPageCTA
-      title="Un projet, une obligation réglementaire, une idée ?"
-      description="Décrivez votre besoin et recevez un devis sans jargon, ou prenez une première rencontre pour défricher — sans engagement, réponse sous 48 h ouvrées."
+      title="Un projet, une échéance réglementaire, ou juste une question ?"
+      description="Décrivez votre besoin, on vous répond avec un devis sans jargon. Ou prenez une première rencontre pour défricher. Sans engagement, réponse sous 48 h ouvrées."
       :links="[
         { label: 'Demander un devis', to: '/devis', icon: 'i-lucide-file-text' },
         { label: 'Première rencontre', to: '/devis?objet=rencontre', color: 'neutral', variant: 'subtle', icon: 'i-lucide-calendar' },

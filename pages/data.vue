@@ -8,63 +8,63 @@ useSeoMeta({
 const engineering = [
   {
     icon: 'i-lucide-workflow',
-    title: 'Pipelines fiables',
+    title: 'Des flux qui tiennent',
     description:
-      'Ingestion, intégration et orchestration de vos flux — du cron legacy aux orchestrateurs modernes, sans tout réécrire.',
+      "Ingestion, intégration, orchestration. Du vieux cron aux orchestrateurs modernes, sans tout réécrire.",
   },
   {
     icon: 'i-lucide-database-zap',
-    title: 'Socle adapté',
+    title: 'Le bon socle',
     description:
-      'Le bon stockage pour le bon usage : relationnel, séries temporelles (TimescaleDB), graphe — selon vos données, pas selon la mode.',
+      "Relationnel, séries temporelles, graphe : on choisit selon vos données, pas selon la mode du moment.",
   },
   {
     icon: 'i-lucide-shield-check',
-    title: 'Qualité & réconciliation',
+    title: 'Une seule vérité',
     description:
-      'Détection des doublons, fantômes et orphelins ; rapprochement multi-source pour une vérité unique sur laquelle décider.',
+      "Doublons, fantômes, orphelins repérés et rapprochés. Vous décidez sur une donnée propre, pas sur trois versions.",
   },
 ]
 
 const governance = [
   {
     icon: 'i-lucide-git-branch',
-    title: 'Lineage de bout en bout',
+    title: 'Savoir d’où ça vient',
     description:
-      'Traçabilité des flux avec OpenLineage / Marquez : d\'où vient chaque donnée, ce qui casse si on change une source.',
+      "Le lineage (OpenLineage / Marquez) trace chaque donnée et vous dit ce qui casse si vous touchez une source.",
   },
   {
     icon: 'i-lucide-book-marked',
-    title: 'Catalogue de données',
+    title: 'Un catalogue vivant',
     description:
-      'Un inventaire vivant des jeux de données, propriétaires et usages — pour arrêter de chercher « qui sait où est quoi ».',
+      "Vos jeux de données, leurs propriétaires, leurs usages. La fin du « c'est qui qui sait où est quoi ? ».",
   },
   {
     icon: 'i-lucide-file-signature',
-    title: 'Contrats de données (ODCS)',
+    title: 'Des contrats de données',
     description:
-      'Des contrats par dataset qui figent le schéma et les attentes : les consommateurs ne se réveillent plus avec une colonne disparue.',
+      "Un contrat par dataset fige le schéma et les attentes. Personne ne se réveille avec une colonne disparue.",
   },
 ]
 
 const valorisation = [
   {
     icon: 'i-lucide-bar-chart-3',
-    title: 'Tableaux de bord',
+    title: 'Des tableaux de bord',
     description:
-      'Restitution claire et actionnable : vos indicateurs là où vos équipes décident, pas dans un tableur oublié.',
+      "Vos indicateurs là où vos équipes décident, pas perdus dans un tableur que plus personne n'ouvre.",
   },
   {
     icon: 'i-lucide-map',
-    title: 'Cartographie',
+    title: 'Sur une carte',
     description:
-      'Visualisation géographique de vos données (territoires, sites, capteurs) — voir « où », pas lire des lignes.',
+      "Territoires, sites, capteurs : on montre « où », au lieu de vous faire lire des lignes.",
   },
   {
     icon: 'i-lucide-share-2',
-    title: 'Ouverture & partage',
+    title: 'Partagé, sous contrôle',
     description:
-      'Exposition maîtrisée : API, exports, open data — partager sans perdre le contrôle ni la gouvernance.',
+      "API, exports, open data. Vous ouvrez vos données sans en perdre la maîtrise.",
   },
 ]
 </script>
@@ -73,8 +73,8 @@ const valorisation = [
   <div>
     <UPageHero
       headline="Data-platform"
-      title="Vos données, fiables, gouvernées et utiles"
-      description="Beaucoup d'organisations accumulent des données sans pouvoir y faire confiance ni les exploiter. CHOM construit le socle qui manque : des pipelines fiables, une gouvernance qui rend la donnée traçable, et une restitution qui éclaire les décisions."
+      title="Des données auxquelles vous pouvez vous fier"
+      description="On accumule des données partout, sans toujours pouvoir s'y fier ni s'en servir. On construit le socle qui manque : des flux qui tiennent, une donnée traçable, et des restitutions qui aident vraiment à décider."
       :links="[
         { label: 'Demander un devis', to: '/devis?ligne=data', icon: 'i-lucide-file-text' },
         { label: 'Première rencontre', to: '/devis?ligne=data&objet=rencontre', color: 'neutral', variant: 'subtle', icon: 'i-lucide-calendar' },
@@ -83,22 +83,22 @@ const valorisation = [
 
     <UPageSection
       headline="Ingénierie"
-      title="Construire un socle de données qui tient"
-      description="On part de votre existant — bases hétérogènes, scripts historiques, exports — pour en faire un flux maîtrisé."
+      title="Construire un socle qui tient"
+      description="On part de ce que vous avez : bases éparpillées, scripts d'époque, exports manuels. On en fait un flux qu'on maîtrise."
       :features="engineering"
     />
 
     <UPageSection
       headline="Gouvernance"
-      title="Rendre la donnée traçable et fiable"
-      description="La gouvernance n'est pas de la paperasse : c'est savoir d'où vient une donnée, qui en dépend, et ce qu'on garantit à ceux qui la consomment."
+      title="Reprendre la main sur la donnée"
+      description="La gouvernance, ce n'est pas de la paperasse. C'est savoir d'où vient une donnée, qui s'en sert, et ce qu'on promet à ceux qui la consomment."
       :features="governance"
     />
 
     <UPageSection
       headline="Valorisation"
-      title="Tirer de la valeur de vos données"
-      description="Une fois la donnée fiable, on la met au service de la décision et de vos publics."
+      title="Les faire travailler"
+      description="Une fois la donnée propre, on la met au travail : pour vos décisions en interne, et pour vos publics."
       :features="valorisation"
     />
 
@@ -107,13 +107,13 @@ const valorisation = [
         variant="subtle"
         icon="i-lucide-compass"
         title="Une méthode, pas des promesses"
-        description="Notre approche vient de chantiers réels : remettre d'aplomb des systèmes de données hétérogènes et volumineux, y instaurer de la traçabilité, et faire parler la donnée — y compris sur des projets d'intérêt général. On applique cette rigueur à votre échelle, sans jargon ni sur-ingénierie."
+        description="Notre approche vient du terrain : remettre d'aplomb des systèmes lourds et hétérogènes, y mettre de la traçabilité, faire enfin parler les chiffres. On l'a fait, y compris sur des projets d'intérêt général. On l'applique à votre échelle, sans jargon ni sur-ingénierie."
       />
     </UPageSection>
 
     <UPageCTA
-      title="Un patrimoine de données à fiabiliser ou à valoriser ?"
-      description="On cadre le besoin avec vous. Demandez un devis, ou commençons par une première rencontre — sans engagement."
+      title="Des données à fiabiliser ou à exploiter ?"
+      description="On cadre le besoin ensemble. Demandez un devis, ou commençons par une première rencontre. Sans engagement."
       :links="[
         { label: 'Demander un devis', to: '/devis?ligne=data', icon: 'i-lucide-file-text' },
         { label: 'Première rencontre', to: '/devis?ligne=data&objet=rencontre', color: 'neutral', variant: 'subtle', icon: 'i-lucide-calendar' },

@@ -24,12 +24,12 @@ const process = [
   {
     icon: 'i-lucide-rocket',
     title: '4. Mise en ligne',
-    description: 'Déploiement, nom de domaine, certificat, hébergement souverain — on s\'occupe de tout.',
+    description: 'Déploiement, nom de domaine, certificat, hébergement souverain. On s\'occupe de tout.',
   },
   {
     icon: 'i-lucide-life-buoy',
     title: '5. Suivi',
-    description: 'Évolutions, contenus, maintenance — ou transmission propre si vous reprenez la main.',
+    description: 'Évolutions, contenus, maintenance. Ou on vous passe la main proprement si vous préférez.',
   },
 ]
 
@@ -44,31 +44,31 @@ const features = [
     icon: 'i-lucide-accessibility',
     title: 'Accessibles',
     description:
-      'Composants accessibles par défaut (ARIA), contraste et navigation clavier — l\'inclusion n\'est pas une option.',
+      "Accessibles par défaut (ARIA), contraste, navigation au clavier. L'inclusion n'est pas une option.",
   },
   {
     icon: 'i-lucide-search',
     title: 'Bien référencés',
     description:
-      'SEO soigné : métadonnées, structure, performances — pour qu\'on vous trouve.',
+      "Métadonnées, structure, vitesse : tout ce qu'il faut pour qu'on vous trouve.",
   },
   {
     icon: 'i-lucide-moon-star',
     title: 'Mode sombre natif',
     description:
-      'Thème clair / sombre intégré et identité de marque pilotée par une seule source.',
+      'Thème clair et sombre intégré, votre identité pilotée depuis un seul endroit.',
   },
   {
     icon: 'i-lucide-mail-check',
     title: 'Formulaires connectés',
     description:
-      'Contact, devis, prise de rendez-vous — branchés à vos outils (email, CRM), avec validation soignée.',
+      'Contact, devis, rendez-vous : branchés à vos outils (email, CRM), avec une vraie validation.',
   },
   {
     icon: 'i-lucide-wrench',
     title: 'Maintenables',
     description:
-      'Code clair et testé, hébergement souverain, et la possibilité de reprendre la main quand vous voulez.',
+      'Code clair et testé, hébergé en Europe. Vous reprenez la main quand vous voulez.',
   },
 ]
 </script>
@@ -77,8 +77,8 @@ const features = [
   <div>
     <UPageHero
       headline="Sites vitrine"
-      title="Un site qui vous ressemble — et qui performe"
-      description="Le site que vous parcourez en est l'exemple : rapide, accessible, sobre et bien référencé. CHOM conçoit des sites vitrine sur une stack moderne (Nuxt), avec une attention réelle aux performances, au SEO et à l'accessibilité."
+      title="Un site qui vous ressemble, et qui va vite"
+      description="Celui que vous parcourez en est un : rapide, sobre, accessible, bien référencé. On les construit sur une stack moderne (Nuxt), avec un vrai soin des performances et du référencement."
       :links="[
         { label: 'Demander un devis', to: '/devis?ligne=sites', icon: 'i-lucide-file-text' },
         { label: 'Première rencontre', to: '/devis?ligne=sites&objet=rencontre', color: 'neutral', variant: 'subtle', icon: 'i-lucide-calendar' },
@@ -103,13 +103,13 @@ const features = [
         variant="subtle"
         icon="i-lucide-sparkles"
         title="La démo, c'est ce site"
-        description="Pas besoin de portfolio à rallonge : ce site est notre vitrine. Mêmes principes, même stack, même exigence — du hero au formulaire de devis connecté à un vrai backend."
+        description="Pas besoin d'un portfolio à rallonge : ce site est notre vitrine. Même stack, même exigence, du grand titre jusqu'au formulaire de devis branché sur un vrai backend."
       />
     </UPageSection>
 
     <UPageCTA
-      title="Besoin d'un site vitrine ou d'une refonte ?"
-      description="Décrivez votre projet et recevez une proposition claire — ou prenez une première rencontre pour en parler de vive voix."
+      title="Un site à créer ou à refondre ?"
+      description="Décrivez votre projet, on revient avec une proposition claire. Ou prenez une première rencontre pour en parler de vive voix."
       :links="[
         { label: 'Demander un devis', to: '/devis?ligne=sites', icon: 'i-lucide-file-text' },
         { label: 'Première rencontre', to: '/devis?ligne=sites&objet=rencontre', color: 'neutral', variant: 'subtle', icon: 'i-lucide-calendar' },

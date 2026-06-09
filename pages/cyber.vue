@@ -9,39 +9,39 @@ useSeoMeta({
 const pilotage = [
   {
     icon: 'i-lucide-layers',
-    title: 'Vue unifiée',
+    title: 'Tout au même endroit',
     description:
-      "Identités, comptes, devices, vulnérabilités, signaux humains et EDR consolidés et réconciliés — fini le recoupement manuel entre 8 outils.",
+      "Identités, comptes, postes, vulnérabilités, alertes : rapprochés automatiquement. Vous arrêtez de recouper six exports à la main.",
   },
   {
     icon: 'i-lucide-gauge',
-    title: 'Score de risque explicable',
+    title: 'Un score qui se justifie',
     description:
-      "Un score sur 3 dimensions (humain, technique, organisation), versionné et traçable — défendable en audit, pas une boîte noire.",
+      "Trois axes (humain, technique, organisation), chaque point traçable et versionné. De quoi tenir face à un auditeur.",
   },
   {
     icon: 'i-lucide-user-x',
-    title: 'Angles morts détectés',
+    title: 'Les angles morts',
     description:
-      'Actifs orphelins, départs encore provisionnés, écarts à votre politique de criticité : les risques que personne ne voit.',
+      "Comptes sans propriétaire, départs jamais déprovisionnés, écarts à votre politique. On remonte ce que personne ne surveille.",
   },
   {
     icon: 'i-lucide-list-checks',
-    title: 'Backlog priorisé',
+    title: 'Quoi corriger en premier',
     description:
-      "Budget limité ? La remédiation est ordonnée par impact réel — vous savez quoi corriger en premier.",
+      "Chaque action classée par le risque qu'elle fait baisser. Petit budget : vous commencez par ce qui compte.",
   },
   {
     icon: 'i-lucide-monitor-dot',
-    title: 'Restitution pour la direction',
+    title: 'De quoi briefer le COMEX',
     description:
-      'Dashboard exécutif et heatmap géographique pour briefer le COMEX / CA — la responsabilité de l\'organe de direction (NIS2 art. 20).',
+      "Une vue d'ensemble et une carte des sites, lisibles en cinq minutes. C'est ce que NIS2 attend de votre direction (art. 20).",
   },
   {
     icon: 'i-lucide-plug',
-    title: 'Sur votre existant',
+    title: 'Branché sur votre stack',
     description:
-      'Connecteurs agnostiques : on se branche sur votre stack, sans la remplacer ni lancer un projet de 12 mois.',
+      "On se connecte à vos outils actuels. Pas de migration, pas de projet qui s'étale sur un an.",
   },
 ]
 
@@ -49,21 +49,21 @@ const pilotage = [
 const pme = [
   {
     icon: 'i-lucide-graduation-cap',
-    title: 'Sensibilisation managée',
+    title: 'Vos campagnes, pilotées',
     description:
-      'Phishing simulé et formation pilotés et reportés pour vous : vous gardez votre outil d\'envoi, nous transformons l\'export en décisions.',
+      "Phishing et formation, gérés à votre place. Vous gardez votre outil d'envoi, on vous rend des décisions, pas un export brut.",
   },
   {
     icon: 'i-lucide-shield',
-    title: 'Hygiène continue',
+    title: "L'hygiène, en continu",
     description:
-      'Suivi du MFA, des comptes orphelins, des départs non déprovisionnés et des dérives — la base qui tient dans la durée.',
+      "Qui n'a pas le MFA, quels comptes traînent après un départ, où ça dérive. Le suivi de base, mais fait pour de vrai.",
   },
   {
     icon: 'i-lucide-file-check',
-    title: 'Attestation présentable',
+    title: 'Une preuve à montrer',
     description:
-      'Une posture à montrer à votre donneur d\'ordre (supply chain) et à votre assureur, pour garder vos marchés et rester couvert.',
+      "Une attestation de posture pour votre donneur d'ordre et votre assureur. Souvent ce qui décide du renouvellement d'un marché.",
   },
 ]
 </script>
@@ -72,8 +72,8 @@ const pme = [
   <div>
     <UPageHero
       headline="Cybersécurité"
-      title="Maîtrisez votre risque cyber — et prouvez-le"
-      description="Vous avez plusieurs outils de sécurité mais aucune réponse simple quand la direction demande « où en est notre risque, et comment le prouve-t-on ? ». CHOM consolide, score, priorise et prouve — à partir de ce que vous avez déjà."
+      title="Maîtrisez votre risque cyber. Et prouvez-le."
+      description="Vous avez des outils de sécurité, mais pas de réponse claire le jour où la direction demande « où en est notre risque, et comment le prouve-t-on ? ». On répond à cette question, à partir de ce que vous avez déjà."
       :links="[
         { label: 'Demander un devis', to: '/devis?ligne=cyber', icon: 'i-lucide-file-text' },
         { label: 'Première rencontre', to: '/devis?ligne=cyber&objet=rencontre', color: 'neutral', variant: 'subtle', icon: 'i-lucide-calendar' },
@@ -82,35 +82,37 @@ const pme = [
 
     <UPageSection
       headline="Entités essentielles & secteur financier"
-      title="Le pilotage du risque (plateforme KAITAIN)"
-      description="Que vous soyez une entité essentielle ou importante au sens de NIS2 (santé, collectivités, énergie, eau, transport, télécoms) ou une entité financière relevant de DORA (assureurs, mutuelles, banques), KAITAIN relie chaque capacité au bon cadre — NIS2 pour les premières, DORA pour les secondes — sans mélanger les deux."
+      title="Le pilotage du risque, avec KAITAIN"
+      description="Vous relevez de NIS2 (santé, collectivités, énergie, eau, transport, télécoms) ou de DORA (assureurs, mutuelles, banques) ? KAITAIN rattache chaque capacité au bon cadre. NIS2 pour les uns, DORA pour les autres. On ne confond pas les deux."
       :features="pilotage"
     />
 
     <UPageSection
       headline="KAITAIN en situation"
       title="Ce que voit votre RSSI"
-      description="Des captures réelles de la plateforme — pas des illustrations de stock."
+      description="De vraies captures de la plateforme. Pas des illustrations de stock."
+      :ui="{ container: 'py-12 sm:py-16' }"
     >
       <div class="space-y-10">
         <ProductShot
           src="/screens/kaitain-dashboard.jpg"
           alt="Tableau de bord exécutif KAITAIN — score global, MFA, clic phishing, top risques"
           title="Tour de contrôle cyber"
-          pain="Un score global défendable et les indicateurs à présenter au COMEX/CA — la responsabilité de l'organe de direction (NIS2 art. 20)."
+          pain="Le score et les chiffres que votre direction réclame, prêts à présenter au COMEX. C'est ce que NIS2 attend de l'organe de direction (art. 20)."
+          img-class="max-h-[460px] object-cover object-top"
         />
         <div class="grid md:grid-cols-2 gap-10">
           <ProductShot
             src="/screens/kaitain-identites.jpg"
             alt="Inventaire des identités KAITAIN avec sources, MFA et score par personne"
-            title="Inventaire unifié & score par identité"
-            pain="Identités consolidées de toutes vos sources, MFA et score visibles d'un coup — fini le recoupement manuel sous Excel."
+            title="Chaque identité, son score"
+            pain="Toutes vos sources réconciliées, le MFA et le score visibles d'un coup. La fin du tableur recoupé à la main."
           />
           <ProductShot
             src="/screens/kaitain-remediation.jpg"
             alt="Backlog de remédiation KAITAIN priorisé par réduction de risque"
-            title="Backlog priorisé par impact"
-            pain="Budget limité ? Les actions sont ordonnées par réduction de risque réelle — vous savez quoi corriger en premier."
+            title="Les actions, dans le bon ordre"
+            pain="Classées par le risque qu'elles font baisser. Vous savez par quoi commencer, sans y passer la journée."
           />
         </div>
       </div>
@@ -118,8 +120,8 @@ const pme = [
 
     <UPageSection
       headline="Pour les PME · service managé"
-      title="Le forfait essentiel cyber PME (Mentat)"
-      description="La PME n'est presque jamais assujettie NIS2 — mais elle doit rester assurable, garder ses marchés face à des donneurs d'ordre exigeants, et survivre à une attaque. Un seul forfait, un seul interlocuteur."
+      title="Le forfait essentiel cyber PME"
+      description="Une PME est rarement soumise à NIS2. Mais elle doit rester assurable, garder ses marchés quand un donneur d'ordre devient exigeant, et tenir le jour où ça tombe. Un forfait, un interlocuteur."
       :features="pme"
       orientation="horizontal"
       reverse
@@ -128,16 +130,16 @@ const pme = [
         <ProductShot
           src="/screens/mentat-campagnes.jpg"
           alt="Pilotage des campagnes de sensibilisation dans CHOM Mentat"
-          title="Vos campagnes pilotées pour vous"
-          pain="Sensibilisation et phishing simulé suivis et reportés — vous gardez votre outil d'envoi, nous transformons l'export en décisions."
+          title="On pilote, vous décidez"
+          pain="Sensibilisation et phishing simulé suivis pour vous. Vous gardez votre outil d'envoi, on en tire un plan d'action."
         />
         <UPageCard variant="subtle">
           <div class="space-y-3">
-            <p class="font-semibold text-highlighted">Le déclencheur : un diagnostic à risque nul</p>
+            <p class="font-semibold text-highlighted">Pour commencer : un diagnostic à risque nul</p>
             <p class="text-sm text-muted">
-              Confiez-nous l'export d'une campagne déjà réalisée, ou laissez-nous regarder votre
-              posture : sous quelques jours, vous recevez un rapport clair — celui que vous n'avez
-              jamais pu produire. Sans engagement, souvent subventionnable.
+              Donnez-nous l'export d'une campagne déjà faite, ou laissez-nous regarder votre
+              posture. Sous quelques jours, vous avez un rapport clair, celui que vous n'avez
+              jamais réussi à sortir. Sans engagement, souvent subventionnable.
             </p>
           </div>
         </UPageCard>
@@ -145,8 +147,8 @@ const pme = [
     </UPageSection>
 
     <UPageCTA
-      title="Une obligation NIS2/DORA, une exigence client ou assureur ?"
-      description="Commencez par un diagnostic à risque nul, ou échangeons lors d'une première rencontre pour situer votre besoin — sans engagement."
+      title="Une échéance NIS2 ou DORA, un client ou un assureur qui demande des preuves ?"
+      description="Commencez par un diagnostic à risque nul, ou prenez une première rencontre pour situer votre besoin. Sans engagement."
       :links="[
         { label: 'Demander un devis', to: '/devis?ligne=cyber', icon: 'i-lucide-file-text' },
         { label: 'Première rencontre', to: '/devis?ligne=cyber&objet=rencontre', color: 'neutral', variant: 'subtle', icon: 'i-lucide-calendar' },

@@ -4,6 +4,8 @@ defineProps<{
   alt: string
   title: string
   pain: string
+  /** Classes image additionnelles (ex. recadrage : max-h + object-cover object-top). */
+  imgClass?: string
 }>()
 </script>
 
@@ -13,7 +15,7 @@ defineProps<{
       :src="src"
       :alt="alt"
       loading="lazy"
-      class="w-full rounded-lg ring ring-default shadow-lg bg-elevated"
+      :class="['w-full rounded-lg ring ring-default shadow-lg bg-elevated', imgClass]"
     >
     <figcaption>
       <p class="font-medium text-highlighted">{{ title }}</p>

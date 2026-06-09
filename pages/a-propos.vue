@@ -10,19 +10,19 @@ const fil = [
     icon: 'i-lucide-shield-check',
     title: 'Protéger',
     description:
-      'La cybersécurité : maîtriser et prouver son risque, rester assurable, tenir ses obligations.',
+      'Votre cyber : mesurer le risque, le réduire, le prouver. Rester assurable, tenir vos obligations.',
   },
   {
     icon: 'i-lucide-database',
     title: 'Fiabiliser',
     description:
-      'La donnée : des flux maîtrisés, traçables et gouvernés, sur lesquels on peut décider.',
+      'Vos données : des flux maîtrisés et traçables, sur lesquels vous pouvez vraiment décider.',
   },
   {
     icon: 'i-lucide-globe',
     title: 'Exposer',
     description:
-      'Le web : une présence en ligne rapide, accessible et soignée, qui vous représente.',
+      'Votre présence en ligne : un site rapide, accessible et soigné, qui vous représente.',
   },
 ]
 
@@ -45,7 +45,7 @@ const principes = [
   {
     icon: 'i-lucide-server',
     title: 'Souverain',
-    description: 'Hébergement en France / UE, données maîtrisées — pas de dépendance lointaine.',
+    description: "Hébergement en France ou dans l'UE, données maîtrisées. Aucune dépendance lointaine.",
   },
 ]
 </script>
@@ -55,13 +55,13 @@ const principes = [
     <UPageHero
       headline="À propos"
       title="Un numérique maîtrisé, en France"
-      description="CHOM est une société française. Notre conviction : les organisations — à La Réunion comme en métropole — méritent le même niveau d'exigence sur leur numérique, sans dépendre de prestataires lointains qui ne connaissent ni leur contexte ni leurs contraintes."
+      description="CHOM est une société française. On part d'une idée simple : à La Réunion comme en métropole, les organisations méritent le même niveau d'exigence sur leur numérique, sans dépendre de prestataires lointains qui ne connaissent ni leur métier ni leurs contraintes."
     />
 
     <UPageSection
       headline="Le fil rouge"
       title="Protéger, fiabiliser, exposer"
-      description="Nos trois métiers ne sont pas un catalogue disparate : ce sont trois faces d'un même numérique maîtrisé. Un même cabinet, une même exigence, et la cohérence quand vos besoins se recoupent — par exemple sécuriser une plateforme de données ou outiller un site de collecte."
+      description="Nos trois métiers ne sont pas un catalogue. C'est le même numérique, vu sous trois angles. Le même monde au bout du fil, et de la cohérence quand vos sujets se croisent : sécuriser une plateforme de données, ou outiller un site qui collecte des contacts."
       :features="fil"
     />
 

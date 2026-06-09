@@ -3,7 +3,7 @@ const points = [
   {
     icon: 'i-lucide-server',
     title: 'Hébergement souverain',
-    description: 'Données hébergées en France / UE, RGPD — option HDS pour la santé.',
+    description: 'Vos données restent en France ou dans l’UE, conformes RGPD. Option HDS pour la santé.',
   },
   {
     icon: 'i-lucide-map-pin',
@@ -13,7 +13,7 @@ const points = [
   {
     icon: 'i-lucide-puzzle',
     title: 'Sur votre existant',
-    description: 'On se branche sur vos outils — pas de projet à rallonge, pas de remplacement.',
+    description: 'On se branche sur vos outils. Pas de remplacement, pas de projet à rallonge.',
   },
 ]
 </script>
