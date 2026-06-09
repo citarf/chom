@@ -7,8 +7,8 @@ const points = [
   },
   {
     icon: 'i-lucide-map-pin',
-    title: 'Ancrage réunionnais',
-    description: "Un cabinet local, un seul interlocuteur, à votre fuseau et sur votre terrain.",
+    title: 'Proximité La Réunion & Hexagone',
+    description: "Un interlocuteur unique qui prend le temps de comprendre votre contexte, à La Réunion comme en métropole.",
   },
   {
     icon: 'i-lucide-puzzle',

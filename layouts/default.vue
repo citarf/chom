@@ -52,7 +52,7 @@ const year = new Date().getFullYear()
   <UFooter>
     <template #left>
       <p class="text-muted text-sm">
-        © {{ year }} CHOM SASU — La Réunion. Cyber, data &amp; web.
+        © {{ year }} CHOM SASU — Cyber, data &amp; web · La Réunion &amp; Hexagone.
       </p>
     </template>
 

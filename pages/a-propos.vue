@@ -2,7 +2,7 @@
 useSeoMeta({
   title: 'À propos — CHOM',
   description:
-    "CHOM : un cabinet réunionnais qui protège, fiabilise et expose le numérique des organisations du territoire. Souveraineté et proximité.",
+    "CHOM : une société française qui protège, fiabilise et expose le numérique des organisations, à La Réunion comme dans l'Hexagone. Souveraineté et proximité.",
 })
 
 const fil = [
@@ -54,8 +54,8 @@ const principes = [
   <div>
     <UPageHero
       headline="À propos"
-      title="Un numérique maîtrisé, depuis La Réunion"
-      description="CHOM est un cabinet réunionnais. Notre conviction : les organisations du territoire méritent le même niveau d'exigence sur leur numérique que partout ailleurs — sans dépendre de prestataires lointains qui ne connaissent ni leur contexte ni leurs contraintes."
+      title="Un numérique maîtrisé, en France"
+      description="CHOM est une société française. Notre conviction : les organisations — à La Réunion comme en métropole — méritent le même niveau d'exigence sur leur numérique, sans dépendre de prestataires lointains qui ne connaissent ni leur contexte ni leurs contraintes."
     />
 
     <UPageSection

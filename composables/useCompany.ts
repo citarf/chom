@@ -10,13 +10,13 @@ export function useCompany() {
 
   return {
     name: 'CHOM',
-    legalName: 'CHOM SASU',
+    legalName: 'CHOM — Combinat des Honnêtes Ober Marchands',
     form: 'Société par actions simplifiée unipersonnelle (SASU)',
-    capital: '[capital social] €',
-    rcs: '[SIREN] — RCS [ville d’immatriculation]',
-    tva: '[n° TVA intracommunautaire]',
-    siege: '[adresse du siège], La Réunion',
-    director: '[nom du président]',
+    capital: '2 100 €',
+    rcs: '943 843 441 — R.C.S. Paris',
+    tva: 'FR37943843441',
+    siege: '60 rue François Ier, 75008 Paris',
+    director: 'Pierre-Alexandre Mahé',
     email: contactEmail,
     host: {
       name: '[nom de l’hébergeur]',

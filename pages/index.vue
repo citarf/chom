@@ -1,8 +1,8 @@
 <script setup lang="ts">
 useSeoMeta({
-  title: 'CHOM — Cyber, data & web à La Réunion',
+  title: "CHOM — Cyber, data & web pour La Réunion et l'Hexagone",
   description:
-    "CHOM SASU : cabinet réunionnais. Pilotage du risque cyber, plateformes de données et sites vitrine — sur votre existant, en hébergement souverain.",
+    "CHOM, société française : pilotage du risque cyber, plateformes de données et sites vitrine — à La Réunion comme en métropole, sur votre existant, en hébergement souverain.",
 })
 
 const services = [
@@ -48,18 +48,18 @@ const services = [
 <template>
   <div>
     <UPageHero
-      title="Cyber, data & web — depuis La Réunion"
+      title="Cyber, data & web — La Réunion & Hexagone"
       :links="[
         { label: 'Demander un devis', to: '/devis', icon: 'i-lucide-file-text' },
         { label: 'Première rencontre', to: '/devis?objet=rencontre', color: 'neutral', variant: 'subtle', icon: 'i-lucide-calendar' },
       ]"
     >
       <template #description>
-        CHOM est un cabinet réunionnais qui aide les organisations à maîtriser leur risque cyber,
-        à tirer de la valeur de leurs données et à exister en ligne. Sur votre existant, en
-        hébergement souverain.
+        CHOM est une société française qui aide les organisations — à La Réunion comme en
+        métropole — à maîtriser leur risque cyber, à tirer de la valeur de leurs données et à
+        exister en ligne. Sur votre existant, en hébergement souverain.
         <span class="block mt-3 text-sm text-muted">
-          Réponse sous 48 h ouvrées · échange sans engagement · cabinet local.
+          Réponse sous 48 h ouvrées · échange sans engagement · interlocuteur unique.
         </span>
       </template>
     </UPageHero>

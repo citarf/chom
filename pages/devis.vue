@@ -11,7 +11,7 @@ useSeoMeta({
 const reassurance = [
   { icon: 'i-lucide-clock', text: 'Réponse sous 48 h ouvrées' },
   { icon: 'i-lucide-handshake', text: 'Sans engagement' },
-  { icon: 'i-lucide-map-pin', text: 'Cabinet local, à votre fuseau' },
+  { icon: 'i-lucide-map-pin', text: 'À La Réunion comme en métropole' },
 ]
 
 const steps = [
