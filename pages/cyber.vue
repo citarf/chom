@@ -88,6 +88,35 @@ const pme = [
     />
 
     <UPageSection
+      headline="KAITAIN en situation"
+      title="Ce que voit votre RSSI"
+      description="Des captures réelles de la plateforme — pas des illustrations de stock."
+    >
+      <div class="space-y-10">
+        <ProductShot
+          src="/screens/kaitain-dashboard.jpg"
+          alt="Tableau de bord exécutif KAITAIN — score global, MFA, clic phishing, top risques"
+          title="Tour de contrôle cyber"
+          pain="Un score global défendable et les indicateurs à présenter au COMEX/CA — la responsabilité de l'organe de direction (NIS2 art. 20)."
+        />
+        <div class="grid md:grid-cols-2 gap-10">
+          <ProductShot
+            src="/screens/kaitain-identites.jpg"
+            alt="Inventaire des identités KAITAIN avec sources, MFA et score par personne"
+            title="Inventaire unifié & score par identité"
+            pain="Identités consolidées de toutes vos sources, MFA et score visibles d'un coup — fini le recoupement manuel sous Excel."
+          />
+          <ProductShot
+            src="/screens/kaitain-remediation.jpg"
+            alt="Backlog de remédiation KAITAIN priorisé par réduction de risque"
+            title="Backlog priorisé par impact"
+            pain="Budget limité ? Les actions sont ordonnées par réduction de risque réelle — vous savez quoi corriger en premier."
+          />
+        </div>
+      </div>
+    </UPageSection>
+
+    <UPageSection
       headline="Pour les PME · service managé"
       title="Le forfait essentiel cyber PME (Mentat)"
       description="La PME n'est presque jamais assujettie NIS2 — mais elle doit rester assurable, garder ses marchés face à des donneurs d'ordre exigeants, et survivre à une attaque. Un seul forfait, un seul interlocuteur."
@@ -95,16 +124,24 @@ const pme = [
       orientation="horizontal"
       reverse
     >
-      <UPageCard variant="subtle">
-        <div class="space-y-3">
-          <p class="font-semibold text-highlighted">Le déclencheur : un diagnostic à risque nul</p>
-          <p class="text-sm text-muted">
-            Confiez-nous l'export d'une campagne déjà réalisée, ou laissez-nous regarder votre
-            posture : sous quelques jours, vous recevez un rapport clair — celui que vous n'avez
-            jamais pu produire. Sans engagement, souvent subventionnable.
-          </p>
-        </div>
-      </UPageCard>
+      <div class="space-y-6">
+        <ProductShot
+          src="/screens/mentat-campagnes.jpg"
+          alt="Pilotage des campagnes de sensibilisation dans CHOM Mentat"
+          title="Vos campagnes pilotées pour vous"
+          pain="Sensibilisation et phishing simulé suivis et reportés — vous gardez votre outil d'envoi, nous transformons l'export en décisions."
+        />
+        <UPageCard variant="subtle">
+          <div class="space-y-3">
+            <p class="font-semibold text-highlighted">Le déclencheur : un diagnostic à risque nul</p>
+            <p class="text-sm text-muted">
+              Confiez-nous l'export d'une campagne déjà réalisée, ou laissez-nous regarder votre
+              posture : sous quelques jours, vous recevez un rapport clair — celui que vous n'avez
+              jamais pu produire. Sans engagement, souvent subventionnable.
+            </p>
+          </div>
+        </UPageCard>
+      </div>
     </UPageSection>
 
     <UPageCTA
