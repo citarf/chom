@@ -1,9 +1,18 @@
 <script setup lang="ts">
+const route = useRoute()
+const isRencontre = computed(() => route.query.objet === 'rencontre')
+
 useSeoMeta({
-  title: 'Demander un devis — CHOM',
+  title: 'Demander un devis ou une rencontre — CHOM',
   description:
-    'Décrivez votre besoin en cyber, data ou web : CHOM vous répond avec un devis qualifié, sans jargon.',
+    'Décrivez votre besoin en cyber, data ou web : CHOM vous répond avec un devis qualifié, ou lors d’une première rencontre sans engagement.',
 })
+
+const reassurance = [
+  { icon: 'i-lucide-clock', text: 'Réponse sous 48 h ouvrées' },
+  { icon: 'i-lucide-handshake', text: 'Sans engagement' },
+  { icon: 'i-lucide-map-pin', text: 'Cabinet local, à votre fuseau' },
+]
 
 const steps = [
   {
@@ -27,9 +36,11 @@ const steps = [
 <template>
   <div>
     <UPageHero
-      headline="Devis"
-      title="Demander un devis qualifié"
-      description="Dites-nous l'essentiel. On revient vers vous rapidement avec une proposition claire — cyber, data, web, ou une combinaison des trois."
+      :headline="isRencontre ? 'Première rencontre' : 'Devis'"
+      :title="isRencontre ? 'Réserver une première rencontre' : 'Demander un devis qualifié'"
+      :description="isRencontre
+        ? 'Pas encore prêt pour un devis ? Échangeons d’abord. Dites-nous l’essentiel, on cale un premier rendez-vous — sans engagement.'
+        : 'Dites-nous l’essentiel. On revient vers vous rapidement avec une proposition claire — cyber, data, web, ou une combinaison des trois.'"
     />
 
     <UContainer class="pb-16 sm:pb-24">
@@ -41,6 +52,17 @@ const steps = [
         </div>
 
         <aside class="lg:col-span-2 space-y-8">
+          <ul class="space-y-3">
+            <li
+              v-for="r in reassurance"
+              :key="r.text"
+              class="flex items-center gap-3 text-sm text-default"
+            >
+              <UIcon :name="r.icon" class="size-5 text-primary shrink-0" />
+              {{ r.text }}
+            </li>
+          </ul>
+
           <div>
             <h2 class="font-semibold text-highlighted mb-4">Comment ça se passe</h2>
             <ol class="space-y-5">

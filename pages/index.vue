@@ -49,12 +49,20 @@ const services = [
   <div>
     <UPageHero
       title="Cyber, data & web — depuis La Réunion"
-      description="CHOM est un cabinet réunionnais qui aide les organisations à maîtriser leur risque cyber, à tirer de la valeur de leurs données et à exister en ligne. Sur votre existant, en hébergement souverain."
       :links="[
         { label: 'Demander un devis', to: '/devis', icon: 'i-lucide-file-text' },
-        { label: 'Découvrir nos services', to: '#services', color: 'neutral', variant: 'subtle', trailingIcon: 'i-lucide-arrow-down' },
+        { label: 'Première rencontre', to: '/devis?objet=rencontre', color: 'neutral', variant: 'subtle', icon: 'i-lucide-calendar' },
       ]"
-    />
+    >
+      <template #description>
+        CHOM est un cabinet réunionnais qui aide les organisations à maîtriser leur risque cyber,
+        à tirer de la valeur de leurs données et à exister en ligne. Sur votre existant, en
+        hébergement souverain.
+        <span class="block mt-3 text-sm text-muted">
+          Réponse sous 48 h ouvrées · échange sans engagement · cabinet local.
+        </span>
+      </template>
+    </UPageHero>
 
     <UPageSection
       id="services"
@@ -75,8 +83,11 @@ const services = [
 
     <UPageCTA
       title="Un projet, une obligation réglementaire, une idée ?"
-      description="Décrivez votre besoin : nous vous répondons avec un devis qualifié, sans jargon."
-      :links="[{ label: 'Demander un devis', to: '/devis', icon: 'i-lucide-file-text' }]"
+      description="Décrivez votre besoin et recevez un devis sans jargon, ou prenez une première rencontre pour défricher — sans engagement, réponse sous 48 h ouvrées."
+      :links="[
+        { label: 'Demander un devis', to: '/devis', icon: 'i-lucide-file-text' },
+        { label: 'Première rencontre', to: '/devis?objet=rencontre', color: 'neutral', variant: 'subtle', icon: 'i-lucide-calendar' },
+      ]"
     />
   </div>
 </template>

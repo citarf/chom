@@ -54,23 +54,32 @@ export class DevisValidationError extends Error {
   }
 }
 
-/** Schéma de validation du domaine (validation HTTP faisant autorité). */
-export const DevisSchema = v.object({
-  name: v.pipe(v.string(), v.trim(), v.minLength(1, 'Indiquez votre nom.')),
-  organisation: v.pipe(v.string(), v.trim(), v.minLength(1, 'Indiquez votre organisation.')),
-  email: v.pipe(v.string(), v.trim(), v.email('Adresse email invalide.')),
-  serviceLines: v.pipe(
-    v.array(v.picklist(SERVICE_LINES, 'Ligne de service inconnue.')),
-    v.minLength(1, 'Choisissez au moins une ligne de service.'),
+/**
+ * Schéma de validation du domaine (validation HTTP faisant autorité).
+ * Le message n'est exigé (≥ 20 car.) que pour une demande de devis ; pour une
+ * première rencontre, on réduit la friction et il reste facultatif.
+ */
+export const DevisSchema = v.pipe(
+  v.object({
+    name: v.pipe(v.string(), v.trim(), v.minLength(1, 'Indiquez votre nom.')),
+    organisation: v.pipe(v.string(), v.trim(), v.minLength(1, 'Indiquez votre organisation.')),
+    email: v.pipe(v.string(), v.trim(), v.email('Adresse email invalide.')),
+    serviceLines: v.pipe(
+      v.array(v.picklist(SERVICE_LINES, 'Ligne de service inconnue.')),
+      v.minLength(1, 'Choisissez au moins une ligne de service.'),
+    ),
+    message: v.pipe(v.string(), v.trim()),
+    echeance: v.optional(v.picklist(ECHEANCES, 'Échéance inconnue.'), 'non_definie'),
+    requestType: v.optional(v.picklist(REQUEST_TYPES, 'Objet de demande inconnu.'), 'devis'),
+  }),
+  v.forward(
+    v.check(
+      (input) => input.requestType !== 'devis' || input.message.length >= 20,
+      'Décrivez votre besoin en quelques mots (20 caractères min.).',
+    ),
+    ['message'],
   ),
-  message: v.pipe(
-    v.string(),
-    v.trim(),
-    v.minLength(20, 'Décrivez votre besoin en quelques mots (20 caractères min.).'),
-  ),
-  echeance: v.optional(v.picklist(ECHEANCES, 'Échéance inconnue.'), 'non_definie'),
-  requestType: v.optional(v.picklist(REQUEST_TYPES, 'Objet de demande inconnu.'), 'devis'),
-})
+)
 
 function uniqueServiceLines(lines: ServiceLine[]): ServiceLine[] {
   return [...new Set(lines)]

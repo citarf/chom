@@ -83,10 +83,16 @@ describe('createDevis', () => {
     ).toThrowError(DevisValidationError)
   })
 
-  it('rejette un message trop court', () => {
+  it('rejette un message trop court pour un devis', () => {
     expect(() => createDevis({ ...validInput, message: 'trop court' })).toThrowError(
       DevisValidationError,
     )
+  })
+
+  it('accepte un message court ou vide pour une première rencontre', () => {
+    const devis = createDevis({ ...validInput, requestType: 'rencontre', message: '' })
+    expect(devis.requestType).toBe('rencontre')
+    expect(devis.message).toBe('')
   })
 
   it('expose les erreurs par champ', () => {
