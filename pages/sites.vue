@@ -8,27 +8,27 @@ useSeoMeta({
 const process = [
   {
     icon: 'i-lucide-messages-square',
-    title: '1. Cadrage',
+    title: 'Cadrage',
     description: 'On clarifie vos objectifs, vos cibles et vos contenus. Devis ferme avant de démarrer.',
   },
   {
     icon: 'i-lucide-pen-tool',
-    title: '2. Design',
+    title: 'Design',
     description: 'Maquette de l\'identité et des pages clés, validée avec vous avant l\'intégration.',
   },
   {
     icon: 'i-lucide-code',
-    title: '3. Intégration',
+    title: 'Intégration',
     description: 'Développement sur stack moderne (Nuxt), responsive, accessible, optimisé pour le SEO.',
   },
   {
     icon: 'i-lucide-rocket',
-    title: '4. Mise en ligne',
+    title: 'Mise en ligne',
     description: 'Déploiement, nom de domaine, certificat, hébergement souverain. On s\'occupe de tout.',
   },
   {
     icon: 'i-lucide-life-buoy',
-    title: '5. Suivi',
+    title: 'Suivi',
     description: 'Évolutions, contenus, maintenance. Ou on vous passe la main proprement si vous préférez.',
   },
 ]
@@ -85,16 +85,16 @@ const features = [
       ]"
     />
 
-    <UPageSection
-      title="Des sites soignés, pas des usines à gaz"
-      :features="features"
-    />
+    <UPageSection title="Des sites soignés, pas des usines à gaz">
+      <FeatureList :items="features" />
+    </UPageSection>
 
     <UPageSection
       title="Un déroulé clair, du cadrage au suivi"
       description="Pas de tunnel opaque : à chaque étape, vous savez où on en est et ce que vous validez."
-      :features="process"
-    />
+    >
+      <FeatureList :items="process" numbered />
+    </UPageSection>
 
     <UPageSection orientation="horizontal" :ui="{ container: 'py-8 sm:py-12' }">
       <UPageCard

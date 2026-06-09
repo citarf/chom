@@ -84,8 +84,9 @@ const pme = [
       headline="Entités essentielles & secteur financier"
       title="Le pilotage du risque, avec KAITAIN"
       description="Vous relevez de NIS2 (santé, collectivités, énergie, eau, transport, télécoms) ou de DORA (assureurs, mutuelles, banques) ? KAITAIN rattache chaque capacité au bon cadre. NIS2 pour les uns, DORA pour les autres. On ne confond pas les deux."
-      :features="pilotage"
-    />
+    >
+      <FeatureList :items="pilotage" />
+    </UPageSection>
 
     <UPageSection
       title="Ce que voit votre RSSI"

@@ -84,20 +84,23 @@ const valorisation = [
     <UPageSection
       title="Construire un socle qui tient"
       description="On part de ce que vous avez : bases éparpillées, scripts d'époque, exports manuels. On en fait un flux qu'on maîtrise."
-      :features="engineering"
-    />
+    >
+      <FeatureList :items="engineering" />
+    </UPageSection>
 
     <UPageSection
       title="Reprendre la main sur la donnée"
       description="La gouvernance, ce n'est pas de la paperasse. C'est savoir d'où vient une donnée, qui s'en sert, et ce qu'on promet à ceux qui la consomment."
-      :features="governance"
-    />
+    >
+      <FeatureList :items="governance" />
+    </UPageSection>
 
     <UPageSection
       title="Les faire travailler"
       description="Une fois la donnée propre, on la met au travail : pour vos décisions en interne, et pour vos publics."
-      :features="valorisation"
-    />
+    >
+      <FeatureList :items="valorisation" />
+    </UPageSection>
 
     <UPageSection orientation="horizontal" :ui="{ container: 'py-8 sm:py-12' }">
       <UPageCard
