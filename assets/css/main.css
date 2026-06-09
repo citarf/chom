@@ -12,9 +12,25 @@
   --font-display: "Space Grotesk Variable", "Inter Variable", sans-serif;
 }
 
-/* Les titres portent la display ; la body reste en Inter. */
+/* Couleur signature (mode clair) : papier tiède + encre bleu-nuit.
+ * On surcharge les tokens sémantiques Nuxt UI ; le mode sombre (.dark) reste
+ * piloté par Nuxt UI (specificité plus forte). */
+:root {
+  --ui-bg: oklch(99.2% 0.006 90);
+  --ui-bg-muted: oklch(97.8% 0.006 90);
+  --ui-bg-elevated: oklch(96.2% 0.006 90);
+  --ui-bg-accented: oklch(92.5% 0.006 90);
+  --ui-border: oklch(90% 0.007 90);
+  --ui-border-muted: oklch(93.5% 0.006 90);
+  --ui-text-highlighted: oklch(24% 0.04 258); /* bleu-nuit pour les titres */
+}
+
+/* Les titres portent la display (Space Grotesk), plus marquée. */
 h1, h2, h3, h4,
 .font-display {
   font-family: var(--font-display);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
+}
+h1, h2 {
+  font-weight: 700;
 }

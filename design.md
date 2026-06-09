@@ -18,10 +18,14 @@ modern-minimal
 Variété = macrostructure/rythme, **pas** thème. Diversification inversée :
 les pages partagent thème, accent, polices, voix CTA.
 
-## Thème (Nuxt UI)
-- `primary` : **indigo** · `neutral` : **slate** · fond clair (défaut Nuxt UI)
-- Accent indigo ≤ ~5 % par vue. Pas de palette brute dans les pages
-  (couleurs sémantiques `text-primary`, `bg-elevated`, `border-default`…).
+## Thème (Nuxt UI) — couleur signature
+- `primary` : **cyan** (accent signature, distinct de KAITAIN violet & Mentat vert)
+  · `neutral` : **slate**
+- **Papier tiède** + **encre bleu-nuit** : tokens sémantiques surchargés en mode clair
+  dans `main.css` (`--ui-bg*` réchauffés, `--ui-text-highlighted` bleu-nuit). Le mode
+  sombre reste piloté par Nuxt UI.
+- Accent cyan ≤ ~5 % par vue (mark, CTA, numéros, liens). Texte sombre sur fond cyan.
+- Pas de palette brute dans les pages (couleurs sémantiques uniquement).
 
 ## Typographie
 - **Display** : Space Grotesk Variable (titres `h1`–`h4`, wordmark), tracking −0.02em

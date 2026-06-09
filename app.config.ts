@@ -7,7 +7,8 @@
 export default defineAppConfig({
   ui: {
     colors: {
-      primary: 'indigo',
+      // Couleur signature : cyan vif — distinct de KAITAIN (violet) et Mentat (vert).
+      primary: 'cyan',
       neutral: 'slate',
     },
     pageHero: {
