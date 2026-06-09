@@ -13,6 +13,8 @@ const repo = new InMemoryDevisRepository()
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig()
   const notifier = createNotifier({
+    resendApiKey: config.resendApiKey,
+    resendFrom: config.resendFrom,
     webhookUrl: config.devisWebhookUrl,
     recipient: config.devisRecipient,
   })

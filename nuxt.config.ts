@@ -10,9 +10,12 @@ export default defineNuxtConfig({
   ],
 
   runtimeConfig: {
-    // Destinataire des demandes (journalisé si aucun webhook n'est configuré).
+    // Destinataire des demandes (email Resend + repli journal).
     devisRecipient: process.env.DEVIS_RECIPIENT ?? 'pamahe@proton.me',
-    // URL de webhook où acheminer les leads (Slack, Make/n8n, transfert email…).
+    // Resend (email) — prioritaire si la clé est présente. Clé via .env, jamais commitée.
+    resendApiKey: process.env.RESEND_API_KEY ?? '',
+    resendFrom: process.env.RESEND_FROM ?? 'CHOM <onboarding@resend.dev>',
+    // URL de webhook (repli si pas de Resend) : Slack, Make/n8n, transfert email…
     devisWebhookUrl: process.env.DEVIS_WEBHOOK_URL ?? '',
     public: {
       contactEmail: process.env.CONTACT_EMAIL ?? 'pamahe@proton.me',
