@@ -8,7 +8,7 @@ type RequestType = 'devis' | 'rencontre'
 
 // Schéma UX (côté client) — miroir des règles du domaine. La validation
 // faisant autorité reste server-side (/api/devis renvoie 422 + fieldErrors).
-// Le message n'est exigé que pour un devis ; facultatif pour une rencontre.
+// Le message n’est exigé que pour un devis ; facultatif pour une rencontre.
 const schema = v.pipe(
   v.object({
     name: v.pipe(v.string(), v.trim(), v.minLength(1, 'Indiquez votre nom.')),

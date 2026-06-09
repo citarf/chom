@@ -29,19 +29,19 @@ const pilotage = [
     icon: 'i-lucide-list-checks',
     title: 'Quoi corriger en premier',
     description:
-      "Chaque action classée par le risque qu'elle fait baisser. Petit budget : vous commencez par ce qui compte.",
+      "Chaque action classée par le risque qu’elle fait baisser. Petit budget : vous commencez par ce qui compte.",
   },
   {
     icon: 'i-lucide-monitor-dot',
     title: 'De quoi briefer le COMEX',
     description:
-      "Une vue d'ensemble et une carte des sites, lisibles en cinq minutes. C'est ce que NIS2 attend de votre direction (art. 20).",
+      "Une vue d’ensemble et une carte des sites, lisibles en cinq minutes. C’est ce que NIS2 attend de votre direction (art. 20).",
   },
   {
     icon: 'i-lucide-plug',
     title: 'Branché sur votre stack',
     description:
-      "On se connecte à vos outils actuels. Pas de migration, pas de projet qui s'étale sur un an.",
+      "On se connecte à vos outils actuels. Pas de migration, pas de projet qui s’étale sur un an.",
   },
 ]
 
@@ -51,19 +51,19 @@ const pme = [
     icon: 'i-lucide-graduation-cap',
     title: 'Vos campagnes, pilotées',
     description:
-      "Phishing et formation, gérés à votre place. Vous gardez votre outil d'envoi, on vous rend des décisions, pas un export brut.",
+      "Phishing et formation, gérés à votre place. Vous gardez votre outil d’envoi, on vous rend des décisions, pas un export brut.",
   },
   {
     icon: 'i-lucide-shield',
-    title: "L'hygiène, en continu",
+    title: "L’hygiène, en continu",
     description:
-      "Qui n'a pas le MFA, quels comptes traînent après un départ, où ça dérive. Le suivi de base, mais fait pour de vrai.",
+      "Qui n’a pas le MFA, quels comptes traînent après un départ, où ça dérive. Le suivi de base, mais fait pour de vrai.",
   },
   {
     icon: 'i-lucide-file-check',
     title: 'Une preuve à montrer',
     description:
-      "Une attestation de posture pour votre donneur d'ordre et votre assureur. Souvent ce qui décide du renouvellement d'un marché.",
+      "Une attestation de posture pour votre donneur d’ordre et votre assureur. Souvent ce qui décide du renouvellement d’un marché.",
   },
 ]
 </script>
@@ -71,7 +71,6 @@ const pme = [
 <template>
   <div>
     <UPageHero
-      headline="Cybersécurité"
       title="Maîtrisez votre risque cyber. Et prouvez-le."
       description="Vous avez des outils de sécurité, mais pas de réponse claire le jour où la direction demande « où en est notre risque, et comment le prouve-t-on ? ». On répond à cette question, à partir de ce que vous avez déjà."
       :links="[
@@ -98,7 +97,7 @@ const pme = [
           src="/screens/kaitain-dashboard.jpg"
           alt="Tableau de bord exécutif KAITAIN — score global, MFA, clic phishing, top risques"
           title="Tour de contrôle cyber"
-          pain="Le score et les chiffres que votre direction réclame, prêts à présenter au COMEX. C'est ce que NIS2 attend de l'organe de direction (art. 20)."
+          pain="Le score et les chiffres que votre direction réclame, prêts à présenter au COMEX. C’est ce que NIS2 attend de l’organe de direction (art. 20)."
           img-class="max-h-[460px] object-cover object-top"
         />
         <div class="grid md:grid-cols-2 gap-10">
@@ -106,13 +105,13 @@ const pme = [
             src="/screens/kaitain-identites.jpg"
             alt="Inventaire des identités KAITAIN avec sources, MFA et score par personne"
             title="Chaque identité, son score"
-            pain="Toutes vos sources réconciliées, le MFA et le score visibles d'un coup. La fin du tableur recoupé à la main."
+            pain="Toutes vos sources réconciliées, le MFA et le score visibles d’un coup. La fin du tableur recoupé à la main."
           />
           <ProductShot
             src="/screens/kaitain-remediation.jpg"
             alt="Backlog de remédiation KAITAIN priorisé par réduction de risque"
             title="Les actions, dans le bon ordre"
-            pain="Classées par le risque qu'elles font baisser. Vous savez par quoi commencer, sans y passer la journée."
+            pain="Classées par le risque qu’elles font baisser. Vous savez par quoi commencer, sans y passer la journée."
           />
         </div>
       </div>
@@ -121,7 +120,7 @@ const pme = [
     <UPageSection
       headline="Pour les PME · service managé"
       title="Le forfait essentiel cyber PME"
-      description="Une PME est rarement soumise à NIS2. Mais elle doit rester assurable, garder ses marchés quand un donneur d'ordre devient exigeant, et tenir le jour où ça tombe. Un forfait, un interlocuteur."
+      description="Une PME est rarement soumise à NIS2. Mais elle doit rester assurable, garder ses marchés quand un donneur d’ordre devient exigeant, et tenir le jour où ça tombe. Un forfait, un interlocuteur."
       :features="pme"
       orientation="horizontal"
       reverse
@@ -131,14 +130,14 @@ const pme = [
           src="/screens/mentat-campagnes.jpg"
           alt="Pilotage des campagnes de sensibilisation dans CHOM Mentat"
           title="On pilote, vous décidez"
-          pain="Sensibilisation et phishing simulé suivis pour vous. Vous gardez votre outil d'envoi, on en tire un plan d'action."
+          pain="Sensibilisation et phishing simulé suivis pour vous. Vous gardez votre outil d’envoi, on en tire un plan d’action."
         />
         <UPageCard variant="subtle">
           <div class="space-y-3">
             <p class="font-semibold text-highlighted">Pour commencer : un diagnostic à risque nul</p>
             <p class="text-sm text-muted">
-              Donnez-nous l'export d'une campagne déjà faite, ou laissez-nous regarder votre
-              posture. Sous quelques jours, vous avez un rapport clair, celui que vous n'avez
+              Donnez-nous l’export d’une campagne déjà faite, ou laissez-nous regarder votre
+              posture. Sous quelques jours, vous avez un rapport clair, celui que vous n’avez
               jamais réussi à sortir. Sans engagement, souvent subventionnable.
             </p>
           </div>

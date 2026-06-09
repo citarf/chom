@@ -23,7 +23,7 @@ const steps = [
   {
     icon: 'i-lucide-phone-call',
     title: 'On échange',
-    description: 'Un court échange pour cadrer le périmètre, les contraintes et l\'échéance.',
+    description: 'Un court échange pour cadrer le périmètre, les contraintes et l’échéance.',
   },
   {
     icon: 'i-lucide-file-text',

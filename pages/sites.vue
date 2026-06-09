@@ -14,7 +14,7 @@ const process = [
   {
     icon: 'i-lucide-pen-tool',
     title: 'Design',
-    description: 'Maquette de l\'identité et des pages clés, validée avec vous avant l\'intégration.',
+    description: 'Maquette de l’identité et des pages clés, validée avec vous avant l’intégration.',
   },
   {
     icon: 'i-lucide-code',
@@ -24,7 +24,7 @@ const process = [
   {
     icon: 'i-lucide-rocket',
     title: 'Mise en ligne',
-    description: 'Déploiement, nom de domaine, certificat, hébergement souverain. On s\'occupe de tout.',
+    description: 'Déploiement, nom de domaine, certificat, hébergement souverain. On s’occupe de tout.',
   },
   {
     icon: 'i-lucide-life-buoy',
@@ -44,13 +44,13 @@ const features = [
     icon: 'i-lucide-accessibility',
     title: 'Accessibles',
     description:
-      "Accessibles par défaut (ARIA), contraste, navigation au clavier. L'inclusion n'est pas une option.",
+      "Accessibles par défaut (ARIA), contraste, navigation au clavier. L’inclusion n’est pas une option.",
   },
   {
     icon: 'i-lucide-search',
     title: 'Bien référencés',
     description:
-      "Métadonnées, structure, vitesse : tout ce qu'il faut pour qu'on vous trouve.",
+      "Métadonnées, structure, vitesse : tout ce qu’il faut pour qu’on vous trouve.",
   },
   {
     icon: 'i-lucide-moon-star',
@@ -100,8 +100,8 @@ const features = [
       <UPageCard
         variant="subtle"
         icon="i-lucide-sparkles"
-        title="La démo, c'est ce site"
-        description="Pas besoin d'un portfolio à rallonge : ce site est notre vitrine. Même stack, même exigence, du grand titre jusqu'au formulaire de devis branché sur un vrai backend."
+        title="La démo, c’est ce site"
+        description="Pas besoin d’un portfolio à rallonge : ce site est notre vitrine. Même stack, même exigence, du grand titre jusqu’au formulaire de devis branché sur un vrai backend."
       />
     </UPageSection>
 

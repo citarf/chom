@@ -2,7 +2,7 @@
 useSeoMeta({
   title: 'À propos — CHOM',
   description:
-    "CHOM : une société française qui protège, fiabilise et expose le numérique des organisations, à La Réunion comme dans l'Hexagone. Souveraineté et proximité.",
+    "CHOM : une société française qui protège, fiabilise et expose le numérique des organisations, à La Réunion comme dans l’Hexagone. Souveraineté et proximité.",
 })
 
 const fil = [
@@ -35,17 +35,17 @@ const principes = [
   {
     icon: 'i-lucide-scale',
     title: 'Franc-jeu',
-    description: 'On dit ce qu\'on fait et ce qu\'on ne fait pas. Pas de survente, pas de FUD.',
+    description: 'On dit ce qu’on fait et ce qu’on ne fait pas. Pas de survente, pas de FUD.',
   },
   {
     icon: 'i-lucide-receipt',
     title: 'Prévisible',
-    description: 'Des forfaits clairs plutôt qu\'une facture à l\'usage qui dérape.',
+    description: 'Des forfaits clairs plutôt qu’une facture à l’usage qui dérape.',
   },
   {
     icon: 'i-lucide-server',
     title: 'Souverain',
-    description: "Hébergement en France ou dans l'UE, données maîtrisées. Aucune dépendance lointaine.",
+    description: "Hébergement en France ou dans l’UE, données maîtrisées. Aucune dépendance lointaine.",
   },
 ]
 </script>
@@ -55,12 +55,12 @@ const principes = [
     <UPageHero
       headline="À propos"
       title="Un numérique maîtrisé, en France"
-      description="CHOM est une société française. On part d'une idée simple : à La Réunion comme en métropole, les organisations méritent le même niveau d'exigence sur leur numérique, sans dépendre de prestataires lointains qui ne connaissent ni leur métier ni leurs contraintes."
+      description="CHOM est une société française. On part d’une idée simple : à La Réunion comme en métropole, les organisations méritent le même niveau d’exigence sur leur numérique, sans dépendre de prestataires lointains qui ne connaissent ni leur métier ni leurs contraintes."
     />
 
     <UPageSection
       title="Protéger, fiabiliser, exposer"
-      description="Nos trois métiers ne sont pas un catalogue. C'est le même numérique, vu sous trois angles. Le même monde au bout du fil, et de la cohérence quand vos sujets se croisent : sécuriser une plateforme de données, ou outiller un site qui collecte des contacts."
+      description="Nos trois métiers ne sont pas un catalogue. C’est le même numérique, vu sous trois angles. Le même monde au bout du fil, et de la cohérence quand vos sujets se croisent : sécuriser une plateforme de données, ou outiller un site qui collecte des contacts."
     >
       <FeatureList :items="fil" />
     </UPageSection>
@@ -72,7 +72,7 @@ const principes = [
     </UPageSection>
 
     <UPageCTA
-      title="Envie d'en parler ?"
+      title="Envie d’en parler ?"
       description="Un devis chiffré, ou simplement une première rencontre pour défricher votre besoin."
       :links="[
         { label: 'Demander un devis', to: '/devis', icon: 'i-lucide-file-text' },

@@ -37,7 +37,7 @@ useSeoMeta({
       <section class="space-y-2">
         <h2 class="text-lg font-semibold text-highlighted">Propriété intellectuelle</h2>
         <p class="text-muted">
-          L'ensemble des contenus de ce site (textes, éléments graphiques, code) est, sauf
+          L’ensemble des contenus de ce site (textes, éléments graphiques, code) est, sauf
           mention contraire, la propriété de {{ c.legalName }}. Toute reproduction sans
           autorisation préalable est interdite.
         </p>

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 defineProps<{
   items: { icon: string; title: string; description: string }[]
-  /** Affiche un numéro (01, 02…) au lieu de l'icône — pour les séquences ordonnées. */
+  /** Affiche un numéro (01, 02…) au lieu de l’icône — pour les séquences ordonnées. */
   numbered?: boolean
 }>()
 

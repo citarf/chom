@@ -1,6 +1,6 @@
 <script setup lang="ts">
 useSeoMeta({
-  title: "CHOM — Cyber, data & web pour La Réunion et l'Hexagone",
+  title: "CHOM — Cyber, data & web pour La Réunion et l’Hexagone",
   description:
     "CHOM, société française : pilotage du risque cyber, plateformes de données et sites vitrine — à La Réunion comme en métropole, sur votre existant, en hébergement souverain.",
 })
@@ -46,7 +46,7 @@ const trust = [
       <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-end">
         <div class="lg:col-span-7">
           <h1 class="font-display text-4xl sm:text-6xl font-bold tracking-tight text-highlighted text-pretty">
-            Cyber, data &amp; web pour La Réunion et l'Hexagone
+            Cyber, data &amp; web pour La Réunion et l’Hexagone
           </h1>
           <p class="mt-6 text-lg sm:text-xl text-muted max-w-xl text-pretty">
             Société française. On sécurise votre informatique, on fiabilise vos données et on

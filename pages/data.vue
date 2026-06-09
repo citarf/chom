@@ -37,7 +37,7 @@ const governance = [
     icon: 'i-lucide-book-marked',
     title: 'Un catalogue vivant',
     description:
-      "Vos jeux de données, leurs propriétaires, leurs usages. La fin du « c'est qui qui sait où est quoi ? ».",
+      "Vos jeux de données, leurs propriétaires, leurs usages. La fin du « c’est qui qui sait où est quoi ? ».",
   },
   {
     icon: 'i-lucide-file-signature',
@@ -52,7 +52,7 @@ const valorisation = [
     icon: 'i-lucide-bar-chart-3',
     title: 'Des tableaux de bord',
     description:
-      "Vos indicateurs là où vos équipes décident, pas perdus dans un tableur que plus personne n'ouvre.",
+      "Vos indicateurs là où vos équipes décident, pas perdus dans un tableur que plus personne n’ouvre.",
   },
   {
     icon: 'i-lucide-map',
@@ -74,7 +74,7 @@ const valorisation = [
     <UPageHero
       headline="Data-platform"
       title="Des données auxquelles vous pouvez vous fier"
-      description="On accumule des données partout, sans toujours pouvoir s'y fier ni s'en servir. On construit le socle qui manque : des flux qui tiennent, une donnée traçable, et des restitutions qui aident vraiment à décider."
+      description="On accumule des données partout, sans toujours pouvoir s’y fier ni s’en servir. On construit le socle qui manque : des flux qui tiennent, une donnée traçable, et des restitutions qui aident vraiment à décider."
       :links="[
         { label: 'Demander un devis', to: '/devis?ligne=data', icon: 'i-lucide-file-text' },
         { label: 'Première rencontre', to: '/devis?ligne=data&objet=rencontre', color: 'neutral', variant: 'subtle', icon: 'i-lucide-calendar' },
@@ -83,14 +83,14 @@ const valorisation = [
 
     <UPageSection
       title="Construire un socle qui tient"
-      description="On part de ce que vous avez : bases éparpillées, scripts d'époque, exports manuels. On en fait un flux qu'on maîtrise."
+      description="On part de ce que vous avez : bases éparpillées, scripts d’époque, exports manuels. On en fait un flux qu’on maîtrise."
     >
       <FeatureList :items="engineering" />
     </UPageSection>
 
     <UPageSection
       title="Reprendre la main sur la donnée"
-      description="La gouvernance, ce n'est pas de la paperasse. C'est savoir d'où vient une donnée, qui s'en sert, et ce qu'on promet à ceux qui la consomment."
+      description="La gouvernance, ce n’est pas de la paperasse. C’est savoir d’où vient une donnée, qui s’en sert, et ce qu’on promet à ceux qui la consomment."
     >
       <FeatureList :items="governance" />
     </UPageSection>
@@ -107,7 +107,7 @@ const valorisation = [
         variant="subtle"
         icon="i-lucide-compass"
         title="Une méthode, pas des promesses"
-        description="Notre approche vient du terrain : remettre d'aplomb des systèmes lourds et hétérogènes, y mettre de la traçabilité, faire enfin parler les chiffres. On l'a fait, y compris sur des projets d'intérêt général. On l'applique à votre échelle, sans jargon ni sur-ingénierie."
+        description="Notre approche vient du terrain : remettre d’aplomb des systèmes lourds et hétérogènes, y mettre de la traçabilité, faire enfin parler les chiffres. On l’a fait, y compris sur des projets d’intérêt général. On l’applique à votre échelle, sans jargon ni sur-ingénierie."
       />
     </UPageSection>
 
