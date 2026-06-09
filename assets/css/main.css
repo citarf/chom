@@ -38,7 +38,13 @@
   --ui-text-highlighted: oklch(23% 0.018 70); /* espresso */
 }
 
-/* Titres en serif raffinée — gravité, pas de tapage. Romain uniquement. */
+/* Garde-fou responsive : aucun débordement horizontal (gate 34). */
+html, body {
+  overflow-x: clip;
+}
+
+/* Titres en serif raffinée — gravité, pas de tapage. Romain uniquement.
+ * overflow-wrap : un mot long (« l'Hexagone ») ne déborde jamais en 320 px (gate 51). */
 h1, h2, h3, h4,
 .font-display {
   font-family: var(--font-display);
@@ -46,4 +52,6 @@ h1, h2, h3, h4,
   font-weight: 500;
   font-style: normal;
   letter-spacing: -0.01em;
+  overflow-wrap: anywhere;
+  min-width: 0;
 }
