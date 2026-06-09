@@ -1,0 +1,75 @@
+<script setup lang="ts">
+import type { NavigationMenuItem } from '@nuxt/ui'
+
+const { contactEmail } = useRuntimeConfig().public
+
+const items = computed<NavigationMenuItem[]>(() => [
+  { label: 'Cyber', to: '/cyber', icon: 'i-lucide-shield-check' },
+  { label: 'Data-platform', to: '/data', icon: 'i-lucide-database' },
+  { label: 'Sites vitrine', to: '/sites', icon: 'i-lucide-layout-template' },
+  { label: 'À propos', to: '/a-propos', icon: 'i-lucide-info' },
+])
+
+const legalItems = computed<NavigationMenuItem[]>(() => [
+  { label: 'Mentions légales', to: '/mentions-legales' },
+  { label: 'Confidentialité', to: '/confidentialite' },
+])
+
+const year = new Date().getFullYear()
+</script>
+
+<template>
+  <UHeader>
+    <template #title>
+      <NuxtLink
+        to="/"
+        class="font-display flex items-center gap-2 text-lg font-bold tracking-tight text-highlighted"
+      >
+        <UIcon name="i-lucide-hexagon" class="size-6 text-primary" />
+        CHOM
+      </NuxtLink>
+    </template>
+
+    <UNavigationMenu :items="items" />
+
+    <template #right>
+      <UColorModeButton />
+      <UButton
+        label="Demander un devis"
+        to="/devis"
+        icon="i-lucide-file-text"
+        class="hidden sm:inline-flex"
+      />
+    </template>
+
+    <template #body>
+      <UNavigationMenu :items="items" orientation="vertical" class="-mx-2.5" />
+      <UButton label="Demander un devis" to="/devis" block class="mt-4" />
+    </template>
+  </UHeader>
+
+  <UMain>
+    <slot />
+  </UMain>
+
+  <UFooter>
+    <template #left>
+      <p class="text-muted text-sm">
+        © {{ year }} CHOM SASU — Cyber, data &amp; web · La Réunion &amp; Hexagone.
+      </p>
+    </template>
+
+    <UNavigationMenu :items="legalItems" variant="link" />
+
+    <template #right>
+      <UButton
+        :label="contactEmail"
+        :to="`mailto:${contactEmail}`"
+        icon="i-lucide-mail"
+        color="neutral"
+        variant="ghost"
+        size="sm"
+      />
+    </template>
+  </UFooter>
+</template>

@@ -1,0 +1,24 @@
+# Nuxt
+.nuxt
+.output
+.data
+dist
+
+# deps
+node_modules
+
+# env
+.env
+.env.*
+!.env.example
+
+# IDE
+.idea
+
+# Outillage skills (installé hors projet)
+.agents
+skills-lock.json
+
+# misc
+.DS_Store
+*.log

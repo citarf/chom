@@ -1,0 +1,57 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+/* Hallmark · genre: modern-minimal (quiet-luxury) · design-system: design.md · designed-as-app
+ * Display: Fraunces Variable (serif) · Body: Inter Variable (auto-hébergées)
+ * Accent : teal (cyan assagi) · Papier ivoire · Encre espresso
+ */
+@theme {
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --font-display: "Fraunces Variable", Georgia, serif;
+}
+
+/* Accent « pétrole muté » : on force directement la variable sémantique Nuxt UI
+ * (--ui-primary), car Nuxt UI fige les valeurs de couleur au build. Bleu-pétrole
+ * sourd, profond, sérieux. Une valeur par mode. */
+:root:not(.dark) {
+  --ui-primary: oklch(45% 0.055 212);
+}
+.dark {
+  --ui-primary: oklch(66% 0.062 212);
+}
+
+/* Mode CLAIR uniquement : papier ivoire chaud + encre espresso.
+ * Scopé à `:not(.dark)` — sinon ces valeurs fuient dans le sombre (spécificité
+ * égale à `.dark`, déclaré après → gagnait et cassait le thème nuit). */
+:root:not(.dark) {
+  --ui-bg: oklch(98.6% 0.008 85);
+  --ui-bg-muted: oklch(97% 0.009 85);
+  --ui-bg-elevated: oklch(95% 0.01 85);
+  --ui-bg-accented: oklch(91.5% 0.011 85);
+  --ui-border: oklch(89% 0.012 85);
+  --ui-border-muted: oklch(92.5% 0.01 85);
+  --ui-text: oklch(34% 0.012 70);
+  --ui-text-muted: oklch(52% 0.012 70);
+  --ui-text-highlighted: oklch(23% 0.018 70); /* espresso */
+}
+
+/* Garde-fou responsive : aucun débordement horizontal (gate 34). */
+html, body {
+  overflow-x: clip;
+}
+
+/* Titres en serif raffinée — gravité, pas de tapage. Romain uniquement.
+ * overflow-wrap : un mot long (« l'Hexagone ») ne déborde jamais en 320 px (gate 51). */
+h1, h2, h3, h4,
+.font-display {
+  font-family: var(--font-display);
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: -0.01em;
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
