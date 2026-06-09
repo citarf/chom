@@ -1,0 +1,26 @@
+version: 2
+updates:
+  # Dépendances JS (pnpm)
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 10
+    groups:
+      nuxt-ui:
+        patterns: ["nuxt", "@nuxt/*"]
+      dev:
+        dependency-type: development
+
+  # Actions GitHub (épinglées au SHA — Dependabot met à jour SHA + commentaire)
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 10
+
+  # Image de base du Dockerfile
+  - package-ecosystem: docker
+    directory: /
+    schedule:
+      interval: weekly
