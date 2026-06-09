@@ -15,17 +15,18 @@
 
 /* Accent « pétrole muté » : on force directement la variable sémantique Nuxt UI
  * (--ui-primary), car Nuxt UI fige les valeurs de couleur au build. Bleu-pétrole
- * sourd, profond, sérieux. */
-:root {
+ * sourd, profond, sérieux. Une valeur par mode. */
+:root:not(.dark) {
   --ui-primary: oklch(45% 0.055 212);
 }
 .dark {
   --ui-primary: oklch(66% 0.062 212);
 }
 
-/* Mode clair : papier ivoire chaud + encre espresso. Le mode sombre (.dark)
- * reste piloté par Nuxt UI (specificité plus forte). */
-:root {
+/* Mode CLAIR uniquement : papier ivoire chaud + encre espresso.
+ * Scopé à `:not(.dark)` — sinon ces valeurs fuient dans le sombre (spécificité
+ * égale à `.dark`, déclaré après → gagnait et cassait le thème nuit). */
+:root:not(.dark) {
   --ui-bg: oklch(98.6% 0.008 85);
   --ui-bg-muted: oklch(97% 0.009 85);
   --ui-bg-elevated: oklch(95% 0.01 85);
