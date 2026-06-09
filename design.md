@@ -31,7 +31,7 @@ les pages partagent thème, accent, polices, voix CTA.
 - Pas de palette brute dans les pages (couleurs sémantiques uniquement).
 
 ## Typographie
-- **Display** : Fraunces Variable (serif, titres `h1`–`h4`, wordmark), poids 500, romain
+- **Display** : Geist Variable (grotesque tech, titres `h1`–`h4`, wordmark), poids 600, tracking −0.025em
 - **Body** : Inter Variable
 - Auto-hébergées via `@fontsource-variable/*` (souveraineté / RGPD — pas de CDN Google)
 - Câblage : `--font-sans` (Inter) dans `@theme`, `--font-display` (Fraunces) + `h1..h4` dans `main.css`

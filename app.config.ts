@@ -14,7 +14,7 @@ export default defineAppConfig({
     },
     pageHero: {
       slots: {
-        title: 'text-4xl sm:text-6xl text-pretty tracking-tight font-medium text-highlighted',
+        title: 'text-4xl sm:text-6xl text-pretty tracking-tight font-semibold text-highlighted',
         container: 'py-20 sm:py-28 lg:py-32 gap-12',
       },
       variants: {
@@ -34,7 +34,7 @@ export default defineAppConfig({
           vertical: {
             headline: 'justify-start',
             leading: 'justify-start',
-            title: 'text-left font-medium',
+            title: 'text-left font-semibold',
             description: 'text-left',
             links: 'justify-start',
             features: 'sm:grid-cols-2 lg:grid-cols-3 gap-8',

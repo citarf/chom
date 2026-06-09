@@ -2,15 +2,15 @@
 @import "@nuxt/ui";
 
 /* Hallmark · genre: modern-minimal (quiet-luxury) · design-system: design.md · designed-as-app
- * Display: Fraunces Variable (serif) · Body: Inter Variable (auto-hébergées)
- * Accent : teal (cyan assagi) · Papier ivoire · Encre espresso
+ * Display: Geist Variable (grotesque tech) · Body: Inter Variable (auto-hébergées)
+ * Accent : pétrole muté · Papier ivoire · Encre espresso
  */
 @theme {
   --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
 }
 
 :root {
-  --font-display: "Fraunces Variable", Georgia, serif;
+  --font-display: "Geist Variable", ui-sans-serif, system-ui, sans-serif;
 }
 
 /* Accent « pétrole muté » : on force directement la variable sémantique Nuxt UI
@@ -43,15 +43,13 @@ html, body {
   overflow-x: clip;
 }
 
-/* Titres en serif raffinée — gravité, pas de tapage. Romain uniquement.
+/* Titres en grotesque Geist — net, sobre, technique. Semibold pour la présence.
  * overflow-wrap : un mot long (« l'Hexagone ») ne déborde jamais en 320 px (gate 51). */
 h1, h2, h3, h4,
 .font-display {
   font-family: var(--font-display);
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-  letter-spacing: -0.01em;
+  font-weight: 600;
+  letter-spacing: -0.025em;
   overflow-wrap: anywhere;
   min-width: 0;
 }
