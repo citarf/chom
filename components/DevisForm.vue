@@ -163,5 +163,11 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
       size="lg"
       :loading="submitting"
     />
+
+    <p class="text-xs text-muted">
+      En envoyant ce formulaire, vous acceptez que vos informations soient utilisées pour traiter
+      votre demande et vous recontacter. Aucune revente.
+      <ULink to="/confidentialite" class="text-primary">Politique de confidentialité</ULink>.
+    </p>
   </UForm>
 </template>

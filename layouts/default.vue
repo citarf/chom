@@ -9,6 +9,11 @@ const items = computed<NavigationMenuItem[]>(() => [
   { label: 'Sites vitrine', to: '/sites', icon: 'i-lucide-layout-template' },
 ])
 
+const legalItems = computed<NavigationMenuItem[]>(() => [
+  { label: 'Mentions légales', to: '/mentions-legales' },
+  { label: 'Confidentialité', to: '/confidentialite' },
+])
+
 const year = new Date().getFullYear()
 </script>
 
@@ -49,6 +54,9 @@ const year = new Date().getFullYear()
         © {{ year }} CHOM SASU — La Réunion. Cyber, data &amp; web.
       </p>
     </template>
+
+    <UNavigationMenu :items="legalItems" variant="link" />
+
     <template #right>
       <UButton
         :label="contactEmail"
