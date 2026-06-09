@@ -5,6 +5,34 @@ useSeoMeta({
     'Création de sites vitrine rapides, accessibles et bien référencés (Nuxt / Nuxt UI) : performances, SEO, mode sombre, formulaires connectés à vos outils.',
 })
 
+const process = [
+  {
+    icon: 'i-lucide-messages-square',
+    title: '1. Cadrage',
+    description: 'On clarifie vos objectifs, vos cibles et vos contenus. Devis ferme avant de démarrer.',
+  },
+  {
+    icon: 'i-lucide-pen-tool',
+    title: '2. Design',
+    description: 'Maquette de l\'identité et des pages clés, validée avec vous avant l\'intégration.',
+  },
+  {
+    icon: 'i-lucide-code',
+    title: '3. Intégration',
+    description: 'Développement sur stack moderne (Nuxt), responsive, accessible, optimisé pour le SEO.',
+  },
+  {
+    icon: 'i-lucide-rocket',
+    title: '4. Mise en ligne',
+    description: 'Déploiement, nom de domaine, certificat, hébergement souverain — on s\'occupe de tout.',
+  },
+  {
+    icon: 'i-lucide-life-buoy',
+    title: '5. Suivi',
+    description: 'Évolutions, contenus, maintenance — ou transmission propre si vous reprenez la main.',
+  },
+]
+
 const features = [
   {
     icon: 'i-lucide-rocket',
@@ -51,13 +79,23 @@ const features = [
       headline="Sites vitrine"
       title="Un site qui vous ressemble — et qui performe"
       description="Le site que vous parcourez en est l'exemple : rapide, accessible, sobre et bien référencé. CHOM conçoit des sites vitrine sur une stack moderne (Nuxt), avec une attention réelle aux performances, au SEO et à l'accessibilité."
-      :links="[{ label: 'Demander un devis', to: '/devis', icon: 'i-lucide-file-text' }]"
+      :links="[
+        { label: 'Demander un devis', to: '/devis?ligne=sites', icon: 'i-lucide-file-text' },
+        { label: 'Première rencontre', to: '/devis?ligne=sites&objet=rencontre', color: 'neutral', variant: 'subtle', icon: 'i-lucide-calendar' },
+      ]"
     />
 
     <UPageSection
       headline="Ce que vous obtenez"
       title="Des sites soignés, pas des usines à gaz"
       :features="features"
+    />
+
+    <UPageSection
+      headline="Comment on procède"
+      title="Un déroulé clair, du cadrage au suivi"
+      description="Pas de tunnel opaque : à chaque étape, vous savez où on en est et ce que vous validez."
+      :features="process"
     />
 
     <UPageSection orientation="horizontal" :ui="{ container: 'py-8 sm:py-12' }">
@@ -71,8 +109,11 @@ const features = [
 
     <UPageCTA
       title="Besoin d'un site vitrine ou d'une refonte ?"
-      description="Décrivez votre projet : nous revenons vers vous avec une proposition claire."
-      :links="[{ label: 'Demander un devis', to: '/devis', icon: 'i-lucide-file-text' }]"
+      description="Décrivez votre projet et recevez une proposition claire — ou prenez une première rencontre pour en parler de vive voix."
+      :links="[
+        { label: 'Demander un devis', to: '/devis?ligne=sites', icon: 'i-lucide-file-text' },
+        { label: 'Première rencontre', to: '/devis?ligne=sites&objet=rencontre', color: 'neutral', variant: 'subtle', icon: 'i-lucide-calendar' },
+      ]"
     />
   </div>
 </template>
