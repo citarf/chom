@@ -45,7 +45,7 @@ const trust = [
     <UContainer class="py-20 sm:py-28 lg:py-32">
       <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-end">
         <div class="lg:col-span-7">
-          <h1 class="font-display text-4xl sm:text-6xl font-medium tracking-tight text-highlighted text-pretty">
+          <h1 class="font-display text-4xl sm:text-6xl font-semibold tracking-tight text-highlighted text-pretty">
             Cyber, data &amp; web pour La Réunion et l’Hexagone
           </h1>
           <p class="mt-6 text-lg sm:text-xl text-muted max-w-xl text-pretty">
@@ -91,7 +91,7 @@ const trust = [
         >
           <div class="grid sm:grid-cols-12 gap-3 sm:gap-8 items-baseline">
             <span class="sm:col-span-1 font-mono text-sm text-primary">{{ s.num }}</span>
-            <h2 class="sm:col-span-4 font-display text-2xl font-medium text-highlighted flex items-center gap-2">
+            <h2 class="sm:col-span-4 font-display text-2xl font-semibold text-highlighted flex items-center gap-2">
               <UIcon :name="s.icon" class="size-5 text-primary shrink-0" />
               {{ s.title }}
             </h2>
