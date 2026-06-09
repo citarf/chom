@@ -2,11 +2,11 @@
 @import "@nuxt/ui";
 
 /* Hallmark · genre: modern-minimal (quiet-luxury) · design-system: design.md · designed-as-app
- * Display: Geist Variable (grotesque tech) · Body: Inter Variable (auto-hébergées)
+ * Type: Geist Variable partout (titres + corps), auto-hébergée
  * Accent : pétrole muté · Papier ivoire · Encre espresso
  */
 @theme {
-  --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Geist Variable", ui-sans-serif, system-ui, sans-serif;
 }
 
 :root {

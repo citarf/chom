@@ -3,9 +3,8 @@ export default defineNuxtConfig({
   ssr: true,
   modules: ['@nuxt/ui'],
   css: [
-    // Polices auto-hébergées (souveraineté / RGPD — pas de CDN Google).
+    // Police auto-hébergée (souveraineté / RGPD — pas de CDN Google). Geist partout.
     '@fontsource-variable/geist',
-    '@fontsource-variable/inter',
     '~/assets/css/main.css',
   ],
 

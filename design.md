@@ -31,8 +31,9 @@ les pages partagent thème, accent, polices, voix CTA.
 - Pas de palette brute dans les pages (couleurs sémantiques uniquement).
 
 ## Typographie
-- **Display** : Geist Variable (grotesque tech, titres `h1`–`h4`, wordmark), poids 600, tracking −0.025em
-- **Body** : Inter Variable
+- **Geist Variable partout** (cohésion façon Vercel), auto-hébergée.
+- Titres `h1`–`h4` / wordmark : poids 600, tracking −0.025em. Corps : poids normal.
+- La hiérarchie titre/texte vient de la taille, du poids et du tracking (famille unique).
 - Auto-hébergées via `@fontsource-variable/*` (souveraineté / RGPD — pas de CDN Google)
 - Câblage : `--font-sans` (Inter) dans `@theme`, `--font-display` (Fraunces) + `h1..h4` dans `main.css`
 
