@@ -1,0 +1,19 @@
+services:
+  web:
+    build:
+      context: .
+    image: chom-website
+    container_name: chom-website
+    ports:
+      - "3000:3000"
+    environment:
+      # Destinataire des demandes de devis (adapter d'envoi stub) + email public.
+      CONTACT_EMAIL: ${CONTACT_EMAIL:-contact@chom.re}
+      DEVIS_RECIPIENT: ${DEVIS_RECIPIENT:-contact@chom.re}
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:3000/"]
+      interval: 15s
+      timeout: 5s
+      start_period: 15s
+      retries: 3
