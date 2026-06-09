@@ -37,6 +37,22 @@ describe('createDevis', () => {
     expect(devis.echeance).toBe('non_definie')
   })
 
+  it("applique l'objet 'devis' par défaut quand absent", () => {
+    const devis = createDevis(validInput)
+    expect(devis.requestType).toBe('devis')
+  })
+
+  it("accepte l'objet 'rencontre'", () => {
+    const devis = createDevis({ ...validInput, requestType: 'rencontre' })
+    expect(devis.requestType).toBe('rencontre')
+  })
+
+  it("rejette un objet de demande inconnu", () => {
+    expect(() =>
+      createDevis({ ...validInput, requestType: 'cafe' as unknown as DevisInput['requestType'] }),
+    ).toThrowError(DevisValidationError)
+  })
+
   it('couvre les trois lignes de service', () => {
     expect(SERVICE_LINES).toEqual(['cyber', 'data', 'sites'])
   })

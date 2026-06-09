@@ -17,6 +17,13 @@ export const ECHEANCES = [
 ] as const
 export type Echeance = (typeof ECHEANCES)[number]
 
+/**
+ * Objet de la demande : un devis chiffré, ou une première rencontre (échange court,
+ * faible engagement). Deux portes d'entrée pour deux niveaux de maturité d'achat.
+ */
+export const REQUEST_TYPES = ['devis', 'rencontre'] as const
+export type RequestType = (typeof REQUEST_TYPES)[number]
+
 /** Saisie brute (côté formulaire / HTTP) avant validation. */
 export interface DevisInput {
   name: string
@@ -25,6 +32,7 @@ export interface DevisInput {
   serviceLines: ServiceLine[]
   message: string
   echeance?: Echeance
+  requestType?: RequestType
 }
 
 /** Entité de domaine validée et normalisée. */
@@ -35,6 +43,7 @@ export interface Devis {
   readonly serviceLines: ReadonlyArray<ServiceLine>
   readonly message: string
   readonly echeance: Echeance
+  readonly requestType: RequestType
 }
 
 /** Erreur de validation portant le détail par champ (pour 422 + formulaire). */
@@ -60,6 +69,7 @@ export const DevisSchema = v.object({
     v.minLength(20, 'Décrivez votre besoin en quelques mots (20 caractères min.).'),
   ),
   echeance: v.optional(v.picklist(ECHEANCES, 'Échéance inconnue.'), 'non_definie'),
+  requestType: v.optional(v.picklist(REQUEST_TYPES, 'Objet de demande inconnu.'), 'devis'),
 })
 
 function uniqueServiceLines(lines: ServiceLine[]): ServiceLine[] {
@@ -92,5 +102,6 @@ export function createDevis(input: DevisInput): Devis {
     serviceLines: Object.freeze(uniqueServiceLines(parsed.serviceLines)),
     message: parsed.message,
     echeance: parsed.echeance,
+    requestType: parsed.requestType,
   })
 }

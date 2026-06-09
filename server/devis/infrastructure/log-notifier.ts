@@ -10,8 +10,9 @@ export class LogNotifier implements NotifierPort {
 
   async notify(devis: Devis, reference: string): Promise<void> {
     console.info(
-      `[devis] ${reference} → ${this.recipient} | ${devis.organisation} (${devis.email}) ` +
-        `| lignes: ${devis.serviceLines.join(', ')} | échéance: ${devis.echeance}`,
+      `[demande] ${reference} (${devis.requestType}) → ${this.recipient} | ` +
+        `${devis.organisation} (${devis.email}) | lignes: ${devis.serviceLines.join(', ')} ` +
+        `| échéance: ${devis.echeance}`,
     )
   }
 }
