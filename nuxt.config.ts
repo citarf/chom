@@ -6,11 +6,11 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     // Destinataire des demandes (journalisé si aucun webhook n'est configuré).
-    devisRecipient: process.env.DEVIS_RECIPIENT ?? 'contact@chom.re',
+    devisRecipient: process.env.DEVIS_RECIPIENT ?? 'pamahe@proton.me',
     // URL de webhook où acheminer les leads (Slack, Make/n8n, transfert email…).
     devisWebhookUrl: process.env.DEVIS_WEBHOOK_URL ?? '',
     public: {
-      contactEmail: process.env.CONTACT_EMAIL ?? 'contact@chom.re',
+      contactEmail: process.env.CONTACT_EMAIL ?? 'pamahe@proton.me',
     },
   },
 
