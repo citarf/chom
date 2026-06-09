@@ -59,14 +59,12 @@ const principes = [
     />
 
     <UPageSection
-      headline="Le fil rouge"
       title="Protéger, fiabiliser, exposer"
       description="Nos trois métiers ne sont pas un catalogue. C'est le même numérique, vu sous trois angles. Le même monde au bout du fil, et de la cohérence quand vos sujets se croisent : sécuriser une plateforme de données, ou outiller un site qui collecte des contacts."
       :features="fil"
     />
 
     <UPageSection
-      headline="Notre façon de travailler"
       title="Ce qui ne change pas, quel que soit le métier"
       :features="principes"
     />

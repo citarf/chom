@@ -88,7 +88,6 @@ const pme = [
     />
 
     <UPageSection
-      headline="KAITAIN en situation"
       title="Ce que voit votre RSSI"
       description="De vraies captures de la plateforme. Pas des illustrations de stock."
       :ui="{ container: 'py-12 sm:py-16' }"

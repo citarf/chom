@@ -2,7 +2,12 @@
 export default defineNuxtConfig({
   ssr: true,
   modules: ['@nuxt/ui'],
-  css: ['~/assets/css/main.css'],
+  css: [
+    // Polices auto-hébergées (souveraineté / RGPD — pas de CDN Google).
+    '@fontsource-variable/inter',
+    '@fontsource-variable/space-grotesk',
+    '~/assets/css/main.css',
+  ],
 
   runtimeConfig: {
     // Destinataire des demandes (journalisé si aucun webhook n'est configuré).

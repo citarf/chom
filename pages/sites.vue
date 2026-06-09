@@ -86,13 +86,11 @@ const features = [
     />
 
     <UPageSection
-      headline="Ce que vous obtenez"
       title="Des sites soignés, pas des usines à gaz"
       :features="features"
     />
 
     <UPageSection
-      headline="Comment on procède"
       title="Un déroulé clair, du cadrage au suivi"
       description="Pas de tunnel opaque : à chaque étape, vous savez où on en est et ce que vous validez."
       :features="process"

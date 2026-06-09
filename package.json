@@ -13,6 +13,8 @@
     "test:watch": "vitest"
   },
   "dependencies": {
+    "@fontsource-variable/inter": "^5.2.8",
+    "@fontsource-variable/space-grotesk": "^5.2.10",
     "@nuxt/ui": "^4.8.1",
     "nuxt": "^4.4.6",
     "valibot": "^1.0.0"

@@ -1,2 +1,20 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
+
+/* Hallmark · genre: modern-minimal · design-system: design.md · designed-as-app
+ * Display: Space Grotesk Variable · Body: Inter Variable (auto-hébergées)
+ */
+@theme {
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --font-display: "Space Grotesk Variable", "Inter Variable", sans-serif;
+}
+
+/* Les titres portent la display ; la body reste en Inter. */
+h1, h2, h3, h4,
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}

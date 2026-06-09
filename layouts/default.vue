@@ -21,7 +21,10 @@ const year = new Date().getFullYear()
 <template>
   <UHeader>
     <template #title>
-      <NuxtLink to="/" class="flex items-center gap-2 font-bold text-lg text-highlighted">
+      <NuxtLink
+        to="/"
+        class="font-display flex items-center gap-2 text-lg font-bold tracking-tight text-highlighted"
+      >
         <UIcon name="i-lucide-hexagon" class="size-6 text-primary" />
         CHOM
       </NuxtLink>
