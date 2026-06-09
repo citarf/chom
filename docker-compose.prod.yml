@@ -1,0 +1,47 @@
+# Déploiement production — VM Debian + Docker Compose.
+# Le TLS et l'entrée 80/443 sont gérés par un Traefik EXTERNE (LXC à part).
+# Cette stack ne fait que servir l'app sur un port du LAN, que Traefik proxifie.
+#
+#   cp .env.prod.example .env   # renseigner RESEND_API_KEY, HOST_PORT, etc.
+#   docker compose -f docker-compose.prod.yml up -d --build
+#
+# Voir DEPLOY.md pour le runbook (config Traefik côté LXC, vérif, exploitation).
+
+services:
+  web:
+    build:
+      context: .
+    image: chom-website:latest
+    restart: unless-stopped
+    env_file: [.env]
+    environment:
+      NITRO_HOST: "0.0.0.0"
+      NITRO_PORT: "3000"
+    # Exposé sur le LAN pour le Traefik externe. Par défaut toutes interfaces ;
+    # mettre HTTP_BIND=<IP_LAN_VM> pour restreindre à l'interface que voit Traefik.
+    ports:
+      - "${HTTP_BIND:-0.0.0.0}:${HOST_PORT:-3000}:3000"
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:3000/api/health"]
+      interval: 15s
+      timeout: 5s
+      start_period: 20s
+      retries: 3
+    mem_limit: 512m
+    cpus: 1.0
+    pids_limit: 256
+    security_opt:
+      - no-new-privileges:true
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+    # --- Optionnel : seulement si ce Traefik partage le socket/réseau Docker de
+    # cette VM (sinon il utilise un provider fichier, cf. DEPLOY.md). ---
+    # labels:
+    #   - "traefik.enable=true"
+    #   - "traefik.http.routers.chom.rule=Host(`chom.re`)"
+    #   - "traefik.http.routers.chom.entrypoints=websecure"
+    #   - "traefik.http.routers.chom.tls.certresolver=le"
+    #   - "traefik.http.services.chom.loadbalancer.server.port=3000"
