@@ -75,14 +75,15 @@ const pme = [
       title="Maîtrisez votre risque cyber — et prouvez-le"
       description="Vous avez plusieurs outils de sécurité mais aucune réponse simple quand la direction demande « où en est notre risque, et comment le prouve-t-on ? ». CHOM consolide, score, priorise et prouve — à partir de ce que vous avez déjà."
       :links="[
-        { label: 'Demander un devis', to: '/devis', icon: 'i-lucide-file-text' },
+        { label: 'Demander un devis', to: '/devis?ligne=cyber', icon: 'i-lucide-file-text' },
+        { label: 'Première rencontre', to: '/devis?ligne=cyber&objet=rencontre', color: 'neutral', variant: 'subtle', icon: 'i-lucide-calendar' },
       ]"
     />
 
     <UPageSection
-      headline="Pour les entités assujetties · NIS2 & DORA"
+      headline="Entités essentielles & secteur financier"
       title="Le pilotage du risque (plateforme KAITAIN)"
-      description="Pour les organisations soumises à NIS2 (santé, collectivités, énergie/eau/transport, télécoms) ou DORA (assureurs, mutuelles, banques) : une tour de contrôle qui relie chaque capacité à une obligation."
+      description="Que vous soyez une entité essentielle ou importante au sens de NIS2 (santé, collectivités, énergie, eau, transport, télécoms) ou une entité financière relevant de DORA (assureurs, mutuelles, banques), KAITAIN relie chaque capacité au bon cadre — NIS2 pour les premières, DORA pour les secondes — sans mélanger les deux."
       :features="pilotage"
     />
 
@@ -108,8 +109,11 @@ const pme = [
 
     <UPageCTA
       title="Une obligation NIS2/DORA, une exigence client ou assureur ?"
-      description="On évalue votre situation et on vous propose le bon niveau d'accompagnement."
-      :links="[{ label: 'Demander un devis', to: '/devis', icon: 'i-lucide-file-text' }]"
+      description="Commencez par un diagnostic à risque nul, ou échangeons lors d'une première rencontre pour situer votre besoin — sans engagement."
+      :links="[
+        { label: 'Demander un devis', to: '/devis?ligne=cyber', icon: 'i-lucide-file-text' },
+        { label: 'Première rencontre', to: '/devis?ligne=cyber&objet=rencontre', color: 'neutral', variant: 'subtle', icon: 'i-lucide-calendar' },
+      ]"
     />
   </div>
 </template>
