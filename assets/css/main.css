@@ -13,6 +13,16 @@
   --font-display: "Fraunces Variable", Georgia, serif;
 }
 
+/* Accent « pétrole muté » : on force directement la variable sémantique Nuxt UI
+ * (--ui-primary), car Nuxt UI fige les valeurs de couleur au build. Bleu-pétrole
+ * sourd, profond, sérieux. */
+:root {
+  --ui-primary: oklch(45% 0.055 212);
+}
+.dark {
+  --ui-primary: oklch(66% 0.062 212);
+}
+
 /* Mode clair : papier ivoire chaud + encre espresso. Le mode sombre (.dark)
  * reste piloté par Nuxt UI (specificité plus forte). */
 :root {

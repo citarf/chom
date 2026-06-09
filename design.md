@@ -19,8 +19,11 @@ Variété = macrostructure/rythme, **pas** thème. Diversification inversée :
 les pages partagent thème, accent, polices, voix CTA.
 
 ## Thème (Nuxt UI) — quiet luxury
-- `primary` : **teal** (cyan assagi, sobre ; distinct de KAITAIN violet & Mentat vert)
-  · `neutral` : **slate**
+- `primary` : **pétrole muté** — alias `teal` dans `app.config`, mais la valeur réelle
+  est forcée via `--ui-primary` dans `main.css` (Nuxt UI fige les couleurs au build et
+  n'accepte pas de couleur custom ; on surcharge donc la variable sémantique).
+  Clair : `oklch(45% 0.055 212)` · Sombre : `oklch(66% 0.062 212)`. Texte blanc sur CTA.
+  Distinct de KAITAIN violet & Mentat vert. · `neutral` : **slate**
 - **Papier ivoire** + **encre espresso** : tokens sémantiques surchargés en mode clair
   dans `main.css` (`--ui-bg*` réchauffés vers l'ivoire, `--ui-text*` vers l'espresso).
   Le mode sombre reste piloté par Nuxt UI.
