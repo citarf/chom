@@ -1,19 +1,20 @@
-// Thème CHOM (ombrelle) — indigo. Distinct du violet KAITAIN et du vert Mentat.
-// Couleur de marque pilotée ici uniquement → pas de palette brute dans les pages.
+// Thème CHOM (ombrelle) — quiet luxury.
+// Accent « pétrole » (cyan assagi) défini dans main.css (@theme). Couleurs pilotées
+// ici uniquement → pas de palette brute dans les pages.
 //
-// Hallmark redesign : on dé-centre tout le site (heroes + en-têtes de section)
-// en surchargeant la variante `vertical` des composants Page de Nuxt UI. Un seul
-// endroit, façon Nuxt UI — pas de CSS dispersé dans les pages.
+// Hallmark redesign : dé-centrage global (variantes vertical de UPageHero/UPageSection),
+// boutons sombres par défaut (l'accent ne sert qu'aux détails), titres en serif medium.
 export default defineAppConfig({
   ui: {
     colors: {
-      // Couleur signature : cyan vif — distinct de KAITAIN (violet) et Mentat (vert).
-      primary: 'cyan',
+      // Cyan assagi → teal (natif Nuxt UI), profond et sobre. Distinct de
+      // KAITAIN (violet) et Mentat (vert/emerald).
+      primary: 'teal',
       neutral: 'slate',
     },
     pageHero: {
       slots: {
-        title: 'text-4xl sm:text-6xl text-pretty tracking-tight font-bold text-highlighted',
+        title: 'text-4xl sm:text-6xl text-pretty tracking-tight font-medium text-highlighted',
         container: 'py-20 sm:py-28 lg:py-32 gap-12',
       },
       variants: {
@@ -33,7 +34,7 @@ export default defineAppConfig({
           vertical: {
             headline: 'justify-start',
             leading: 'justify-start',
-            title: 'text-left',
+            title: 'text-left font-medium',
             description: 'text-left',
             links: 'justify-start',
             features: 'sm:grid-cols-2 lg:grid-cols-3 gap-8',

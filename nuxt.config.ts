@@ -4,8 +4,8 @@ export default defineNuxtConfig({
   modules: ['@nuxt/ui'],
   css: [
     // Polices auto-hébergées (souveraineté / RGPD — pas de CDN Google).
+    '@fontsource-variable/fraunces',
     '@fontsource-variable/inter',
-    '@fontsource-variable/space-grotesk',
     '~/assets/css/main.css',
   ],
 

@@ -18,20 +18,20 @@ modern-minimal
 Variété = macrostructure/rythme, **pas** thème. Diversification inversée :
 les pages partagent thème, accent, polices, voix CTA.
 
-## Thème (Nuxt UI) — couleur signature
-- `primary` : **cyan** (accent signature, distinct de KAITAIN violet & Mentat vert)
+## Thème (Nuxt UI) — quiet luxury
+- `primary` : **teal** (cyan assagi, sobre ; distinct de KAITAIN violet & Mentat vert)
   · `neutral` : **slate**
-- **Papier tiède** + **encre bleu-nuit** : tokens sémantiques surchargés en mode clair
-  dans `main.css` (`--ui-bg*` réchauffés, `--ui-text-highlighted` bleu-nuit). Le mode
-  sombre reste piloté par Nuxt UI.
-- Accent cyan ≤ ~5 % par vue (mark, CTA, numéros, liens). Texte sombre sur fond cyan.
+- **Papier ivoire** + **encre espresso** : tokens sémantiques surchargés en mode clair
+  dans `main.css` (`--ui-bg*` réchauffés vers l'ivoire, `--ui-text*` vers l'espresso).
+  Le mode sombre reste piloté par Nuxt UI.
+- Accent teal ≤ ~5 % par vue, surtout le CTA primaire (plein). Secondaire discret (subtle).
 - Pas de palette brute dans les pages (couleurs sémantiques uniquement).
 
 ## Typographie
-- **Display** : Space Grotesk Variable (titres `h1`–`h4`, wordmark), tracking −0.02em
+- **Display** : Fraunces Variable (serif, titres `h1`–`h4`, wordmark), poids 500, romain
 - **Body** : Inter Variable
 - Auto-hébergées via `@fontsource-variable/*` (souveraineté / RGPD — pas de CDN Google)
-- Câblage : `--font-sans` (Inter) dans `@theme`, `--font-display` + `h1..h4` dans `main.css`
+- Câblage : `--font-sans` (Inter) dans `@theme`, `--font-display` (Fraunces) + `h1..h4` dans `main.css`
 
 ## Alignement
 Tout aligné à gauche. Les variantes `vertical` de `UPageHero` / `UPageSection`

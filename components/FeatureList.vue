@@ -22,7 +22,7 @@ const pad = (i: number) => String(i + 1).padStart(2, '0')
             class="font-mono text-sm text-primary tabular-nums"
           >{{ pad(i) }}</span>
           <UIcon v-else :name="it.icon" class="size-5 text-primary shrink-0" />
-          <h3 class="font-display text-lg font-semibold text-highlighted">{{ it.title }}</h3>
+          <h3 class="font-display text-lg font-medium text-highlighted">{{ it.title }}</h3>
         </div>
         <p class="sm:col-span-8 text-muted text-pretty">{{ it.description }}</p>
       </div>
