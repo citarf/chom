@@ -16,7 +16,7 @@
     "@fontsource-variable/geist": "^5.2.9",
     "@nuxt/ui": "^4.8.1",
     "nuxt": "^4.4.8",
-    "valibot": "^1.0.0"
+    "valibot": "^1.4.2"
   },
   "devDependencies": {
     "@types/node": "^25.9.2",
